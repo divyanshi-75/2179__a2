@@ -1,0 +1,287 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Australia home chart rankings — lollipop with zone backgrounds.",
+  "width": "container",
+  "height": 900,
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans",
+    "view": { "stroke": "transparent" },
+    "axis": {
+      "domainColor": "rgba(255,255,255,0.08)",
+      "gridColor": "rgba(255,255,255,0.04)",
+      "tickColor": "transparent",
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    },
+    "legend": {
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "orient": "top",
+      "padding": 8
+    }
+  },
+  "data": { "url": "data/aussie_artists_aggregated_fixed.csv" },
+  "transform": [
+    { "filter": "datum.is_home == 'home'" },
+    {
+      "aggregate": [
+        { "op": "min",  "field": "peak_rank",   "as": "peak_rank"   },
+        { "op": "sum",  "field": "days_charted", "as": "days_charted" },
+        { "op": "mean", "field": "avg_rank",     "as": "avg_rank"    }
+      ],
+      "groupby": ["artist"]
+    }
+  ],
+  "layer": [
+    {
+      "description": "Gold zone — rank 1-10",
+      "data": { "values": [{ "x1": 1, "x2": 10 }] },
+      "mark": { "type": "rect", "color": "rgba(255,215,0,0.06)" },
+      "encoding": {
+        "x":  { "field": "x1", "type": "quantitative" },
+        "x2": { "field": "x2", "type": "quantitative" },
+        "y":  { "value": 0 },
+        "y2": { "value": 900 }
+      }
+    },
+    {
+      "description": "Silver zone — rank 11-50",
+      "data": { "values": [{ "x1": 10, "x2": 50 }] },
+      "mark": { "type": "rect", "color": "rgba(200,200,200,0.04)" },
+      "encoding": {
+        "x":  { "field": "x1", "type": "quantitative" },
+        "x2": { "field": "x2", "type": "quantitative" },
+        "y":  { "value": 0 },
+        "y2": { "value": 900 }
+      }
+    },
+    {
+      "description": "Bronze zone — rank 51-100",
+      "data": { "values": [{ "x1": 50, "x2": 100 }] },
+      "mark": { "type": "rect", "color": "rgba(205,127,50,0.05)" },
+      "encoding": {
+        "x":  { "field": "x1", "type": "quantitative" },
+        "x2": { "field": "x2", "type": "quantitative" },
+        "y":  { "value": 0 },
+        "y2": { "value": 900 }
+      }
+    },
+    {
+      "description": "Finalist zone — rank 101-200",
+      "data": { "values": [{ "x1": 100, "x2": 200 }] },
+      "mark": { "type": "rect", "color": "rgba(29,185,84,0.03)" },
+      "encoding": {
+        "x":  { "field": "x1", "type": "quantitative" },
+        "x2": { "field": "x2", "type": "quantitative" },
+        "y":  { "value": 0 },
+        "y2": { "value": 900 }
+      }
+    },
+    {
+      "description": "Reference lines at rank 10, 50, 100",
+      "data": { "values": [{ "v": 10 }, { "v": 50 }, { "v": 100 }] },
+      "mark": {
+        "type": "rule",
+        "color": "rgba(255,255,255,0.1)",
+        "strokeDash": [3, 4],
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "x": { "field": "v", "type": "quantitative" }
+      }
+    },
+    {
+      "description": "Zone label annotations at the top",
+      "data": {
+        "values": [
+          { "x": 5,   "label": "Gold"     },
+          { "x": 30,  "label": "Silver"   },
+          { "x": 75,  "label": "Bronze"   },
+          { "x": 150, "label": "Finalist" }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 9,
+        "color": "rgba(255,255,255,0.2)",
+        "baseline": "top",
+        "align": "center"
+      },
+      "encoding": {
+        "x":    { "field": "x",     "type": "quantitative" },
+        "y":    { "value": 6 },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Lollipop rule stems - from left edge to peak_rank",
+      "mark": {
+        "type": "rule",
+        "color": "rgba(29,185,84,0.3)",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "y": {
+          "field": "artist",
+          "type": "nominal",
+          "sort": { "field": "peak_rank", "op": "min", "order": "ascending" },
+          "title": null,
+          "axis": {
+            "labelColor": "#c8c6c0",
+            "labelFontSize": 11,
+            "labelLimit": 160,
+            "domainColor": "rgba(255,255,255,0.08)"
+          }
+        },
+        "x":  { "datum": 1, "type": "quantitative" },
+        "x2": { "field": "peak_rank", "type": "quantitative" }
+      }
+    },
+    {
+      "description": "Lollipop points - circle at peak_rank, size = days_charted",
+      "mark": { "type": "point", "filled": true },
+      "params": [
+        { "name": "hover3", "select": { "type": "point", "on": "mouseover", "fields": ["artist"] } }
+      ],
+      "encoding": {
+        "y": {
+          "field": "artist",
+          "type": "nominal",
+          "sort": { "field": "peak_rank", "op": "min", "order": "ascending" },
+          "axis": null
+        },
+        "x": {
+          "field": "peak_rank",
+          "type": "quantitative",
+          "scale": { "domain": [1, 200] },
+          "title": "Peak chart rank (lower = higher on charts)"
+        },
+        "color": {
+          "condition": [
+            { "test": "datum.peak_rank <= 10",  "value": "#1DB954" },
+            { "test": "datum.peak_rank <= 50",  "value": "#c8c6c0" },
+            { "test": "datum.peak_rank <= 100", "value": "#cd7f32" }
+          ],
+          "value": "#444440"
+        },
+        "size": {
+          "field": "days_charted",
+          "type": "quantitative",
+          "scale": { "range": [30, 400] },
+          "legend": { "title": "Days on chart" }
+        },
+        "opacity": {
+          "condition": { "param": "hover3", "value": 1 },
+          "value": 0.7
+        },
+        "tooltip": [
+          { "field": "artist",      "type": "nominal",     "title": "Artist"       },
+          { "field": "peak_rank",   "type": "quantitative","title": "Peak rank"    },
+          { "field": "days_charted","type": "quantitative","title": "Days charted" },
+          { "field": "avg_rank",    "type": "quantitative","title": "Avg rank", "format": ".0f" }
+        ]
+      }
+    },
+    {
+      "description": "Layer 1 -Gold zone annotation highlight rect",
+      "data": { "values": [{ "x1": 0, "x2": 10 }] },
+      "mark": { "type": "rect", "color": "rgba(255,215,0,0.06)", "stroke": null },
+      "encoding": {
+        "x":  { "field": "x1", "type": "quantitative" },
+        "x2": { "field": "x2", "type": "quantitative" },
+        "y":  { "value": 0 },
+        "y2": { "value": 900 }
+      }
+    },
+    {
+      "description": "Layer 2a -Gold zone text callout line 1",
+      "data": { "values": [{ "rank": 5, "label": "Only 7 of 49 Australian artists" }] },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#ffd700",
+        "fontWeight": "500",
+        "align": "center",
+        "baseline": "top"
+      },
+      "encoding": {
+        "x":    { "field": "rank", "type": "quantitative" },
+        "y":    { "value": 45 },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Layer 2b -Gold zone text callout line 2",
+      "data": { "values": [{ "rank": 5, "label2": "ever cracked the top 10" }] },
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "color": "rgba(255,215,0,0.6)",
+        "align": "center",
+        "baseline": "top"
+      },
+      "encoding": {
+        "x":    { "field": "rank", "type": "quantitative" },
+        "y":    { "value": 59 },
+        "text": { "field": "label2", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Layer 3a -Finalist zone text annotation line 1",
+      "data": { "values": [{ "rank": 150, "note": "Charting here still means" }] },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "rgba(255,255,255,0.5)",
+        "fontStyle": "italic",
+        "align": "center",
+        "baseline": "top"
+      },
+      "encoding": {
+        "x":    { "field": "rank", "type": "quantitative" },
+        "y":    { "value": 720 },
+        "text": { "field": "note", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Layer 3b -Finalist zone text annotation line 2",
+      "data": { "values": [{ "rank": 150, "note2": "top 200 on earth" }] },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "rgba(255,255,255,0.5)",
+        "fontStyle": "italic",
+        "align": "center",
+        "baseline": "top"
+      },
+      "encoding": {
+        "x":    { "field": "rank", "type": "quantitative" },
+        "y":    { "value": 734 },
+        "text": { "field": "note2", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Layer 4 -Rank 1 arrow annotation",
+      "data": { "values": [{ "rank": 1, "txt": "\u2191 Two artists hit #1" }] },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#1DB954",
+        "fontWeight": "500",
+        "align": "left",
+        "baseline": "top",
+        "dx": 8
+      },
+      "encoding": {
+        "x":    { "field": "rank", "type": "quantitative" },
+        "y":    { "value": 70 },
+        "text": { "field": "txt", "type": "nominal" }
+      }
+    }
+  ]
+}
+

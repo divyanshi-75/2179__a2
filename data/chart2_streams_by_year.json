@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Who dominated Australian artists' global streams — and when? Top 6 artists by total global streams · 2017-2021.",
+  "width": "container",
+  "height": 300,
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans",
+    "view": { "stroke": "transparent" },
+    "axis": {
+      "domainColor": "rgba(255,255,255,0.08)",
+      "gridColor": "rgba(255,255,255,0.04)",
+      "tickColor": "transparent",
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    },
+    "legend": {
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "orient": "right"
+    }
+  },
+  "data": { "url": "data/aussie_artists_aggregated_fixed.csv" },
+  "transform": [
+    { "filter": "datum.is_home == 'global'" },
+    {
+      "aggregate": [{ "op": "sum", "field": "total_streams", "as": "total_streams" }],
+      "groupby": ["artist", "year"]
+    },
+    { "calculate": "datum.total_streams / 1000000", "as": "streams_M" },
+    {
+      "joinaggregate": [{ "op": "sum", "field": "total_streams", "as": "artist_total" }],
+      "groupby": ["artist"]
+    },
+    {
+      "window": [{ "op": "dense_rank", "as": "artist_rank" }],
+      "sort": [{ "field": "artist_total", "order": "descending" }]
+    },
+    { "filter": "datum.artist_rank <= 6" },
+    { "filter": "datum.streams_M > 0" },
+    { "calculate": "toString(datum.year)", "as": "year" }
+  ],
+  "mark": { "type": "bar", "cornerRadiusTopLeft": 2, "cornerRadiusTopRight": 2 },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": { "labelAngle": 0 }
+    },
+    "y": {
+      "field": "streams_M",
+      "type": "quantitative",
+      "title": "Global streams (millions)",
+      "stack": "zero"
+    },
+    "color": {
+      "field": "artist",
+      "type": "nominal",
+      "scale": {
+        "domain": ["The Kid LAROI", "5 Seconds of Summer", "Sia", "Vance Joy", "Troye Sivan", "Kylie Minogue"],
+        "range": ["#FF8250", "#1DB954", "#64B4FF", "#C88CFF", "#FFD23C", "#FF78B4"]
+      },
+      "legend": { "title": "Artist", "orient": "right" }
+    },
+    "opacity": {
+      "condition": { "param": "hover2", "value": 1 },
+      "value": 0.7
+    },
+    "tooltip": [
+      { "field": "artist", "type": "nominal", "title": "Artist" },
+      { "field": "year", "type": "ordinal", "title": "Year" },
+      { "field": "streams_M", "type": "quantitative", "title": "Streams (M)", "format": ".1f" }
+    ]
+  },
+  "params": [
+    { "name": "hover2", "select": { "type": "point", "on": "mouseover", "fields": ["artist"] } }
+  ]
+}

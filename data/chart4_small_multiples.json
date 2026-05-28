@@ -1,0 +1,370 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Small multiples: monthly home streams per artist, 2017-2021.",
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans",
+    "view": {
+      "stroke": "rgba(255,255,255,0.06)"
+    },
+    "axis": {
+      "domainColor": "rgba(255,255,255,0.08)",
+      "gridColor": "rgba(255,255,255,0.04)",
+      "tickColor": "transparent",
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 10,
+      "titleFontSize": 10
+    },
+    "facet": {
+      "spacing": 20
+    }
+  },
+  "data": {
+    "url": "data/aussie_timeline_fixed.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "month": "date:'%Y-%m'",
+        "total_streams": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.is_home == 'home'"
+    },
+    {
+      "filter": {
+        "field": "artist",
+        "oneOf": [
+          "The Kid LAROI",
+          "5 Seconds of Summer",
+          "Vance Joy",
+          "PNAU",
+          "Ruel",
+          "Ocean Alley",
+          "Hilltop Hoods",
+          "Peking Duk",
+          "Hooligan Hefs",
+          "Sia"
+        ]
+      }
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "total_streams",
+          "as": "total_streams"
+        }
+      ],
+      "groupby": [
+        "artist",
+        "month"
+      ]
+    }
+  ],
+  "facet": {
+    "field": "artist",
+    "type": "nominal",
+    "sort": [
+      "The Kid LAROI",
+      "5 Seconds of Summer",
+      "Vance Joy",
+      "PNAU",
+      "Ruel",
+      "Ocean Alley",
+      "Hilltop Hoods",
+      "Peking Duk",
+      "Hooligan Hefs",
+      "Sia"
+    ],
+    "header": {
+      "labelColor": "#c8c6c0",
+      "labelFontSize": 12,
+      "labelFont": "DM Sans",
+      "title": null
+    }
+  },
+  "columns": 2,
+  "spec": {
+    "width": 340,
+    "height": 120,
+    "layer": [
+      {
+        "description": "Area chart",
+        "mark": {
+          "type": "area",
+          "line": true,
+          "fillOpacity": 0.15,
+          "interpolate": "monotone"
+        },
+        "encoding": {
+          "x": {
+            "field": "month",
+            "type": "temporal",
+            "title": null,
+            "axis": {
+              "format": "%Y",
+              "labelAngle": 0
+            }
+          },
+          "y": {
+            "field": "total_streams",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+              "labelExpr": "datum.value >= 1000000 ? (datum.value/1000000) + 'M' : datum.value"
+            }
+          },
+          "color": {
+            "field": "artist",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+                "The Kid LAROI",
+                "5 Seconds of Summer",
+                "Vance Joy",
+                "PNAU",
+                "Ruel",
+                "Ocean Alley",
+                "Hilltop Hoods",
+                "Peking Duk",
+                "Hooligan Hefs",
+                "Sia"
+              ],
+              "range": [
+                "#ff8250",
+                "#1DB954",
+                "#ce93d8",
+                "#ffd54f",
+                "#64b5f6",
+                "#f48fb1",
+                "#a5d6a7",
+                "#ffb74d",
+                "#ef5350",
+                "#4dd0e1"
+              ]
+            },
+            "legend": null
+          },
+          "tooltip": [
+            {
+              "field": "artist",
+              "type": "nominal",
+              "title": "Artist"
+            },
+            {
+              "field": "month",
+              "type": "temporal",
+              "title": "Month",
+              "format": "%b %Y"
+            },
+            {
+              "field": "total_streams",
+              "type": "quantitative",
+              "title": "Streams",
+              "format": ".2s"
+            }
+          ]
+        }
+      },
+      {
+        "description": "Annotation line 1 - bold title in artist colour",
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "top",
+          "fontSize": 11,
+          "fontWeight": "700",
+          "dx": 8,
+          "dy": 0
+        },
+        "transform": [
+          {
+            "aggregate": [
+              {
+                "op": "argmax",
+                "field": "total_streams",
+                "as": "peak"
+              }
+            ],
+            "groupby": [
+              "artist"
+            ]
+          },
+          {
+            "calculate": "datum.peak.month",
+            "as": "peak_month"
+          },
+          {
+            "calculate": "datum.peak.total_streams",
+            "as": "peak_streams"
+          },
+          {
+            "calculate": "datum.artist === 'The Kid LAROI' ? 'STAY feat. Bieber \u2014 Jul 2021' : datum.artist === '5 Seconds of Summer' ? 'Youngblood peak \u2014 Jun 2018' : datum.artist === 'Vance Joy' ? 'Active all 60 months' : datum.artist === 'PNAU' ? 'Chameleon era \u2014 2017-18' : datum.artist === 'Ruel' ? 'Free Time EP \u2014 2019' : datum.artist === 'Ocean Alley' ? 'Cannonball \u2014 mid 2019' : datum.artist === 'Hilltop Hoods' ? 'Clark Griswold \u2014 2019' : datum.artist === 'Peking Duk' ? 'Big 2017-18 run' : datum.artist === 'Hooligan Hefs' ? 'Emerged 2019' : 'Music soundtrack 2021'",
+            "as": "ann_line1"
+          },
+          {
+            "calculate": "datum.artist === 'The Kid LAROI' ? 'Peak 19M streams in one month' : datum.artist === '5 Seconds of Summer' ? 'Peak 9M \u2014 faded but held on' : datum.artist === 'Vance Joy' ? 'No spike \u2014 pure consistency' : datum.artist === 'PNAU' ? 'Peaked at 6M, dropped sharply' : datum.artist === 'Ruel' ? 'Peaked at 4M \u2014 levelled off' : datum.artist === 'Ocean Alley' ? 'Peak 3M \u2014 steady since' : datum.artist === 'Hilltop Hoods' ? 'Peak 3M \u2014 zero global reach' : datum.artist === 'Peking Duk' ? 'Peak 5M \u2014 no comeback yet' : datum.artist === 'Hooligan Hefs' ? 'Slow grind to 2M by 2021' : 'Dipped 2018-19, back in 2021'",
+            "as": "ann_line2"
+          },
+          {
+            "calculate": "datum.artist === 'The Kid LAROI' ? 'Fastest rise in this dataset' : datum.artist === '5 Seconds of Summer' ? '90+ weeks on global charts' : datum.artist === 'Vance Joy' ? 'Most reliable home streamer' : datum.artist === 'PNAU' ? 'Two-year window, then gone' : datum.artist === 'Ruel' ? 'Youngest peak \u2014 signed at 15' : datum.artist === 'Ocean Alley' ? 'Built loyal fanbase slowly' : datum.artist === 'Hilltop Hoods' ? 'Longest-running Aussie hip-hop act' : datum.artist === 'Peking Duk' ? 'Festival act without longevity' : datum.artist === 'Hooligan Hefs' ? 'Western Sydney drill pioneer' : '97% of streams are global'",
+            "as": "ann_line3"
+          },
+          {
+            "calculate": "datum.artist === 'The Kid LAROI' ? '#ff8250' : datum.artist === '5 Seconds of Summer' ? '#1DB954' : datum.artist === 'Vance Joy' ? '#ce93d8' : datum.artist === 'PNAU' ? '#ffd54f' : datum.artist === 'Ruel' ? '#64b5f6' : datum.artist === 'Ocean Alley' ? '#f48fb1' : datum.artist === 'Hilltop Hoods' ? '#a5d6a7' : datum.artist === 'Peking Duk' ? '#ffb74d' : datum.artist === 'Hooligan Hefs' ? '#ef5350' : '#4dd0e1'",
+            "as": "ann_color"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "value": 0
+          },
+          "y": {
+            "value": 14
+          },
+          "text": {
+            "field": "ann_line1"
+          },
+          "color": {
+            "field": "ann_color",
+            "type": "nominal",
+            "scale": null
+          }
+        }
+      },
+      {
+        "description": "Annotation line 2 - regular weight, muted",
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "top",
+          "fontSize": 10,
+          "fontWeight": "400",
+          "dx": 8,
+          "dy": 28
+        },
+        "transform": [
+          {
+            "aggregate": [
+              {
+                "op": "argmax",
+                "field": "total_streams",
+                "as": "peak"
+              }
+            ],
+            "groupby": [
+              "artist"
+            ]
+          },
+          {
+            "calculate": "datum.peak.month",
+            "as": "peak_month"
+          },
+          {
+            "calculate": "datum.peak.total_streams",
+            "as": "peak_streams"
+          },
+          {
+            "calculate": "datum.artist === 'The Kid LAROI' ? 'STAY feat. Bieber \u2014 Jul 2021' : datum.artist === '5 Seconds of Summer' ? 'Youngblood peak \u2014 Jun 2018' : datum.artist === 'Vance Joy' ? 'Active all 60 months' : datum.artist === 'PNAU' ? 'Chameleon era \u2014 2017-18' : datum.artist === 'Ruel' ? 'Free Time EP \u2014 2019' : datum.artist === 'Ocean Alley' ? 'Cannonball \u2014 mid 2019' : datum.artist === 'Hilltop Hoods' ? 'Clark Griswold \u2014 2019' : datum.artist === 'Peking Duk' ? 'Big 2017-18 run' : datum.artist === 'Hooligan Hefs' ? 'Emerged 2019' : 'Music soundtrack 2021'",
+            "as": "ann_line1"
+          },
+          {
+            "calculate": "datum.artist === 'The Kid LAROI' ? 'Peak 19M streams in one month' : datum.artist === '5 Seconds of Summer' ? 'Peak 9M \u2014 faded but held on' : datum.artist === 'Vance Joy' ? 'No spike \u2014 pure consistency' : datum.artist === 'PNAU' ? 'Peaked at 6M, dropped sharply' : datum.artist === 'Ruel' ? 'Peaked at 4M \u2014 levelled off' : datum.artist === 'Ocean Alley' ? 'Peak 3M \u2014 steady since' : datum.artist === 'Hilltop Hoods' ? 'Peak 3M \u2014 zero global reach' : datum.artist === 'Peking Duk' ? 'Peak 5M \u2014 no comeback yet' : datum.artist === 'Hooligan Hefs' ? 'Slow grind to 2M by 2021' : 'Dipped 2018-19, back in 2021'",
+            "as": "ann_line2"
+          },
+          {
+            "calculate": "datum.artist === 'The Kid LAROI' ? 'Fastest rise in this dataset' : datum.artist === '5 Seconds of Summer' ? '90+ weeks on global charts' : datum.artist === 'Vance Joy' ? 'Most reliable home streamer' : datum.artist === 'PNAU' ? 'Two-year window, then gone' : datum.artist === 'Ruel' ? 'Youngest peak \u2014 signed at 15' : datum.artist === 'Ocean Alley' ? 'Built loyal fanbase slowly' : datum.artist === 'Hilltop Hoods' ? 'Longest-running Aussie hip-hop act' : datum.artist === 'Peking Duk' ? 'Festival act without longevity' : datum.artist === 'Hooligan Hefs' ? 'Western Sydney drill pioneer' : '97% of streams are global'",
+            "as": "ann_line3"
+          },
+          {
+            "calculate": "datum.artist === 'The Kid LAROI' ? '#ff8250' : datum.artist === '5 Seconds of Summer' ? '#1DB954' : datum.artist === 'Vance Joy' ? '#ce93d8' : datum.artist === 'PNAU' ? '#ffd54f' : datum.artist === 'Ruel' ? '#64b5f6' : datum.artist === 'Ocean Alley' ? '#f48fb1' : datum.artist === 'Hilltop Hoods' ? '#a5d6a7' : datum.artist === 'Peking Duk' ? '#ffb74d' : datum.artist === 'Hooligan Hefs' ? '#ef5350' : '#4dd0e1'",
+            "as": "ann_color"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "value": 0
+          },
+          "y": {
+            "value": 14
+          },
+          "text": {
+            "field": "ann_line2"
+          },
+          "color": {
+            "value": "rgba(255,255,255,0.7)"
+          }
+        }
+      },
+      {
+        "description": "Annotation line 3 - italic, more muted",
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "top",
+          "fontSize": 10,
+          "fontWeight": "400",
+          "fontStyle": "italic",
+          "dx": 8,
+          "dy": 44
+        },
+        "transform": [
+          {
+            "aggregate": [
+              {
+                "op": "argmax",
+                "field": "total_streams",
+                "as": "peak"
+              }
+            ],
+            "groupby": [
+              "artist"
+            ]
+          },
+          {
+            "calculate": "datum.peak.month",
+            "as": "peak_month"
+          },
+          {
+            "calculate": "datum.peak.total_streams",
+            "as": "peak_streams"
+          },
+          {
+            "calculate": "datum.artist === 'The Kid LAROI' ? 'STAY feat. Bieber \u2014 Jul 2021' : datum.artist === '5 Seconds of Summer' ? 'Youngblood peak \u2014 Jun 2018' : datum.artist === 'Vance Joy' ? 'Active all 60 months' : datum.artist === 'PNAU' ? 'Chameleon era \u2014 2017-18' : datum.artist === 'Ruel' ? 'Free Time EP \u2014 2019' : datum.artist === 'Ocean Alley' ? 'Cannonball \u2014 mid 2019' : datum.artist === 'Hilltop Hoods' ? 'Clark Griswold \u2014 2019' : datum.artist === 'Peking Duk' ? 'Big 2017-18 run' : datum.artist === 'Hooligan Hefs' ? 'Emerged 2019' : 'Music soundtrack 2021'",
+            "as": "ann_line1"
+          },
+          {
+            "calculate": "datum.artist === 'The Kid LAROI' ? 'Peak 19M streams in one month' : datum.artist === '5 Seconds of Summer' ? 'Peak 9M \u2014 faded but held on' : datum.artist === 'Vance Joy' ? 'No spike \u2014 pure consistency' : datum.artist === 'PNAU' ? 'Peaked at 6M, dropped sharply' : datum.artist === 'Ruel' ? 'Peaked at 4M \u2014 levelled off' : datum.artist === 'Ocean Alley' ? 'Peak 3M \u2014 steady since' : datum.artist === 'Hilltop Hoods' ? 'Peak 3M \u2014 zero global reach' : datum.artist === 'Peking Duk' ? 'Peak 5M \u2014 no comeback yet' : datum.artist === 'Hooligan Hefs' ? 'Slow grind to 2M by 2021' : 'Dipped 2018-19, back in 2021'",
+            "as": "ann_line2"
+          },
+          {
+            "calculate": "datum.artist === 'The Kid LAROI' ? 'Fastest rise in this dataset' : datum.artist === '5 Seconds of Summer' ? '90+ weeks on global charts' : datum.artist === 'Vance Joy' ? 'Most reliable home streamer' : datum.artist === 'PNAU' ? 'Two-year window, then gone' : datum.artist === 'Ruel' ? 'Youngest peak \u2014 signed at 15' : datum.artist === 'Ocean Alley' ? 'Built loyal fanbase slowly' : datum.artist === 'Hilltop Hoods' ? 'Longest-running Aussie hip-hop act' : datum.artist === 'Peking Duk' ? 'Festival act without longevity' : datum.artist === 'Hooligan Hefs' ? 'Western Sydney drill pioneer' : '97% of streams are global'",
+            "as": "ann_line3"
+          },
+          {
+            "calculate": "datum.artist === 'The Kid LAROI' ? '#ff8250' : datum.artist === '5 Seconds of Summer' ? '#1DB954' : datum.artist === 'Vance Joy' ? '#ce93d8' : datum.artist === 'PNAU' ? '#ffd54f' : datum.artist === 'Ruel' ? '#64b5f6' : datum.artist === 'Ocean Alley' ? '#f48fb1' : datum.artist === 'Hilltop Hoods' ? '#a5d6a7' : datum.artist === 'Peking Duk' ? '#ffb74d' : datum.artist === 'Hooligan Hefs' ? '#ef5350' : '#4dd0e1'",
+            "as": "ann_color"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "value": 0
+          },
+          "y": {
+            "value": 14
+          },
+          "text": {
+            "field": "ann_line3"
+          },
+          "color": {
+            "value": "rgba(255,255,255,0.5)"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Waffle chart: share of global streams per year for top 6 Australian artists.",
+  "width": "container",
+  "height": 420,
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans",
+    "view": { "stroke": "transparent" },
+    "axis": {
+      "gridColor": "rgba(255,255,255,0.04)",
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    },
+    "legend": {
+      "labelColor": "#e0deda",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 13,
+      "symbolSize": 140,
+      "symbolType": "square",
+      "orient": "right",
+      "padding": 12
+    }
+  },
+  "params": [
+    { "name": "year_filter", "value": "ALL" }
+  ],
+  "data": { "url": "data/chart2_waffle_data.json" },
+  "transform": [
+    { "filter": "datum.year == year_filter" }
+  ],
+  "layer": [
+    {
+      "params": [
+        { "name": "hover_waffle", "select": { "type": "point", "on": "mouseover", "fields": ["artist"] } }
+      ],
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 3,
+        "stroke": "rgba(255,255,255,0.06)",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "ordinal",
+          "axis": null,
+          "scale": { "paddingInner": 0.08, "paddingOuter": 0.04 }
+        },
+        "y": {
+          "field": "y",
+          "type": "ordinal",
+          "axis": null,
+          "scale": { "paddingInner": 0.08, "paddingOuter": 0.04 }
+        },
+        "color": {
+          "field": "artist",
+          "type": "nominal",
+          "scale": {
+            "domain": ["The Kid LAROI", "5 Seconds of Summer", "Sia", "Vance Joy", "Troye Sivan", "Kylie Minogue"],
+            "range": [
+              "rgba(255, 130, 80, 0.75)",
+              "rgba(29, 185, 84, 0.75)",
+              "rgba(100, 180, 255, 0.75)",
+              "rgba(200, 140, 255, 0.75)",
+              "rgba(255, 210, 60, 0.75)",
+              "rgba(255, 120, 180, 0.75)"
+            ]
+          },
+          "legend": { "title": null }
+        },
+        "opacity": {
+          "condition": { "param": "hover_waffle", "value": 1 },
+          "value": 0.85
+        },
+        "tooltip": [
+          { "field": "artist",  "type": "nominal",     "title": "Artist" },
+          { "field": "pct",     "type": "quantitative", "title": "Stream share", "format": ".1f" },
+          { "field": "year",    "type": "nominal",      "title": "Year" }
+        ]
+      }
+    },
+    {
+      "transform": [
+        { "filter": "datum.cell == 0" },
+        { "calculate": "datum.artist + '  ·  ' + format(datum.pct, '.1f') + '%'", "as": "label" }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 14,
+        "fontWeight": 500,
+        "color": "#f0ede6"
+      },
+      "encoding": {
+        "x": { "value": 4 },
+        "y": { "value": 8 },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    }
+  ]
+}

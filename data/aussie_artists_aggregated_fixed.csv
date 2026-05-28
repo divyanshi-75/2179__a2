@@ -1,0 +1,1239 @@
+artist,region,year,is_home,total_streams,days_charted,avg_rank,peak_rank
+5 Seconds of Summer,Argentina,2018,global,1078343.0,57,156.0344827586207,88
+5 Seconds of Summer,Argentina,2019,global,22165.0,1,186.0,186
+5 Seconds of Summer,Australia,2018,home,47490471.0,312,44.41469816272966,1
+5 Seconds of Summer,Australia,2019,home,59587863.0,365,60.066834804539724,6
+5 Seconds of Summer,Australia,2020,home,27933758.0,364,94.1396933560477,42
+5 Seconds of Summer,Australia,2021,home,14468452.0,353,105.57507082152975,70
+5 Seconds of Summer,Austria,2018,global,2120931.0,265,58.467924528301886,14
+5 Seconds of Summer,Austria,2019,global,1559218.0,284,134.69736842105263,63
+5 Seconds of Summer,Austria,2020,global,74669.0,15,153.4,120
+5 Seconds of Summer,Belgium,2018,global,5018136.0,288,33.88316151202749,7
+5 Seconds of Summer,Belgium,2019,global,5528567.0,360,91.09185441941075,12
+5 Seconds of Summer,Belgium,2020,global,1314967.0,168,170.0148514851485,106
+5 Seconds of Summer,Bolivia,2018,global,164899.0,137,135.32846715328466,72
+5 Seconds of Summer,Bolivia,2019,global,3330.0,3,197.33333333333334,195
+5 Seconds of Summer,Brazil,2018,global,10147777.0,122,125.95901639344262,60
+5 Seconds of Summer,Brazil,2019,global,535112.0,8,185.75,162
+5 Seconds of Summer,Bulgaria,2018,global,2281.0,2,47.0,46
+5 Seconds of Summer,Bulgaria,2019,global,80094.0,64,42.109375,16
+5 Seconds of Summer,Bulgaria,2020,global,8887.0,8,71.875,58
+5 Seconds of Summer,Canada,2018,global,24580826.0,296,43.77777777777778,11
+5 Seconds of Summer,Canada,2019,global,30499160.0,360,82.70840480274443,19
+5 Seconds of Summer,Canada,2020,global,11190618.0,270,150.83227848101265,62
+5 Seconds of Summer,Canada,2021,global,173179.0,6,190.5,186
+5 Seconds of Summer,Chile,2018,global,562735.0,36,164.63888888888889,92
+5 Seconds of Summer,Colombia,2018,global,493412.0,80,145.4625,84
+5 Seconds of Summer,Costa Rica,2018,global,542985.0,170,122.60588235294118,66
+5 Seconds of Summer,Costa Rica,2019,global,17521.0,7,184.28571428571428,169
+5 Seconds of Summer,Czech Republic,2018,global,1405331.0,290,51.53767123287671,6
+5 Seconds of Summer,Czech Republic,2019,global,2374307.0,361,91.2363315696649,33
+5 Seconds of Summer,Czech Republic,2020,global,1096590.0,228,141.59459459459458,80
+5 Seconds of Summer,Czech Republic,2021,global,4452.0,1,191.0,191
+5 Seconds of Summer,Denmark,2018,global,11320473.0,289,55.058651026392965,3
+5 Seconds of Summer,Denmark,2019,global,7509390.0,302,104.05242718446603,20
+5 Seconds of Summer,Denmark,2020,global,446269.0,48,185.2941176470588,101
+5 Seconds of Summer,Dominican Republic,2018,global,104847.0,80,145.975,79
+5 Seconds of Summer,Ecuador,2018,global,184365.0,73,158.87671232876713,104
+5 Seconds of Summer,El Salvador,2018,global,42319.0,39,128.92307692307693,102
+5 Seconds of Summer,Estonia,2018,global,320046.0,189,31.402116402116402,8
+5 Seconds of Summer,Estonia,2019,global,188536.0,148,49.503311258278146,12
+5 Seconds of Summer,Estonia,2020,global,12298.0,10,58.6,40
+5 Seconds of Summer,Finland,2018,global,4837938.0,266,68.26691729323308,15
+5 Seconds of Summer,Finland,2019,global,2557516.0,259,118.39772727272727,30
+5 Seconds of Summer,Finland,2020,global,327504.0,38,127.28947368421052,76
+5 Seconds of Summer,France,2018,global,4646936.0,98,95.05102040816327,34
+5 Seconds of Summer,France,2019,global,133953.0,3,175.66666666666666,162
+5 Seconds of Summer,Germany,2018,global,22579381.0,238,95.8655462184874,25
+5 Seconds of Summer,Germany,2019,global,8795254.0,142,162.49295774647888,105
+5 Seconds of Summer,Germany,2020,global,316427.0,5,173.0,149
+5 Seconds of Summer,Global,2018,global,520804775.0,294,50.36842105263158,6
+5 Seconds of Summer,Global,2019,global,571608255.0,360,99.32931034482759,21
+5 Seconds of Summer,Global,2020,global,183102986.0,206,163.9488188976378,55
+5 Seconds of Summer,Greece,2018,global,677244.0,283,49.202749140893474,4
+5 Seconds of Summer,Greece,2019,global,967065.0,328,114.86503067484662,19
+5 Seconds of Summer,Greece,2020,global,67390.0,28,155.20689655172413,92
+5 Seconds of Summer,Guatemala,2018,global,250167.0,140,143.79285714285714,84
+5 Seconds of Summer,Honduras,2018,global,115154.0,103,99.49514563106796,66
+5 Seconds of Summer,Honduras,2019,global,17430.0,17,148.11764705882354,127
+5 Seconds of Summer,Hong Kong,2018,global,1386876.0,286,73.86013986013987,4
+5 Seconds of Summer,Hong Kong,2019,global,1596789.0,285,91.83957219251337,12
+5 Seconds of Summer,Hong Kong,2020,global,181671.0,47,119.73469387755102,38
+5 Seconds of Summer,Hungary,2018,global,1534068.0,294,45.39393939393939,2
+5 Seconds of Summer,Hungary,2019,global,2454775.0,364,60.54071661237785,7
+5 Seconds of Summer,Hungary,2020,global,1844320.0,351,115.69449378330373,26
+5 Seconds of Summer,Hungary,2021,global,477808.0,158,162.31645569620252,118
+5 Seconds of Summer,Iceland,2018,global,368598.0,219,74.05936073059361,25
+5 Seconds of Summer,Iceland,2019,global,201583.0,167,104.46153846153847,56
+5 Seconds of Summer,India,2019,global,3125248.0,216,135.36491228070176,12
+5 Seconds of Summer,India,2020,global,128568.0,6,187.5,162
+5 Seconds of Summer,Indonesia,2018,global,8265888.0,312,85.7129909365559,11
+5 Seconds of Summer,Indonesia,2019,global,6537609.0,201,155.0,46
+5 Seconds of Summer,Indonesia,2020,global,29745.0,1,195.0,195
+5 Seconds of Summer,Ireland,2018,global,6298991.0,311,52.14454277286136,4
+5 Seconds of Summer,Ireland,2019,global,4518531.0,342,103.71324863883848,34
+5 Seconds of Summer,Ireland,2020,global,1686819.0,223,157.4460966542751,58
+5 Seconds of Summer,Ireland,2021,global,5300.0,1,196.0,196
+5 Seconds of Summer,Israel,2018,global,859338.0,252,28.0515873015873,8
+5 Seconds of Summer,Israel,2019,global,1881458.0,365,88.13754646840148,15
+5 Seconds of Summer,Israel,2020,global,813764.0,236,137.32510288065845,81
+5 Seconds of Summer,Italy,2018,global,13281481.0,237,95.13502109704642,39
+5 Seconds of Summer,Italy,2019,global,2196580.0,56,169.57142857142858,104
+5 Seconds of Summer,Japan,2018,global,1479411.0,202,107.02970297029702,51
+5 Seconds of Summer,Japan,2019,global,1515348.0,128,149.953125,65
+5 Seconds of Summer,Latvia,2018,global,440714.0,249,34.21285140562249,5
+5 Seconds of Summer,Latvia,2019,global,507628.0,305,54.01015228426396,14
+5 Seconds of Summer,Latvia,2020,global,33775.0,27,78.41379310344827,40
+5 Seconds of Summer,Lithuania,2018,global,461726.0,227,29.572052401746724,3
+5 Seconds of Summer,Lithuania,2019,global,513305.0,280,48.19891008174387,14
+5 Seconds of Summer,Lithuania,2020,global,57005.0,43,73.4,38
+5 Seconds of Summer,Luxembourg,2018,global,1003.0,1,50.0,50
+5 Seconds of Summer,Malaysia,2018,global,5291588.0,312,48.712676056338026,4
+5 Seconds of Summer,Malaysia,2019,global,8201741.0,365,93.71085858585859,23
+5 Seconds of Summer,Malaysia,2020,global,1475145.0,137,150.41538461538462,61
+5 Seconds of Summer,Mexico,2018,global,4671144.0,84,147.23809523809524,76
+5 Seconds of Summer,Netherlands,2018,global,24863586.0,256,40.804597701149426,5
+5 Seconds of Summer,Netherlands,2019,global,22503232.0,358,95.06564551422319,27
+5 Seconds of Summer,Netherlands,2020,global,5387716.0,126,119.06944444444444,52
+5 Seconds of Summer,New Zealand,2018,global,8489408.0,308,40.487878787878785,1
+5 Seconds of Summer,New Zealand,2019,global,8668297.0,363,66.25801749271137,13
+5 Seconds of Summer,New Zealand,2020,global,2945934.0,336,135.00997506234415,75
+5 Seconds of Summer,New Zealand,2021,global,194661.0,31,186.03225806451613,165
+5 Seconds of Summer,Norway,2018,global,16154845.0,311,42.74921630094044,4
+5 Seconds of Summer,Norway,2019,global,6464645.0,302,124.48329621380846,35
+5 Seconds of Summer,Norway,2020,global,621031.0,54,162.38888888888889,67
+5 Seconds of Summer,Panama,2018,global,145632.0,113,135.38938053097345,75
+5 Seconds of Summer,Panama,2019,global,2741.0,2,191.0,189
+5 Seconds of Summer,Paraguay,2018,global,40562.0,31,161.1290322580645,108
+5 Seconds of Summer,Peru,2018,global,314386.0,40,160.65,97
+5 Seconds of Summer,Philippines,2018,global,13305619.0,286,96.44673539518901,17
+5 Seconds of Summer,Philippines,2019,global,11845013.0,269,141.89460154241644,48
+5 Seconds of Summer,Philippines,2020,global,857406.0,26,159.74074074074073,110
+5 Seconds of Summer,Poland,2018,global,9408754.0,285,48.19428571428571,1
+5 Seconds of Summer,Poland,2019,global,13039176.0,354,88.45904436860069,8
+5 Seconds of Summer,Poland,2020,global,4789429.0,207,159.9810606060606,63
+5 Seconds of Summer,Portugal,2018,global,3167486.0,278,43.30555555555556,7
+5 Seconds of Summer,Portugal,2019,global,2906455.0,331,119.6252427184466,25
+5 Seconds of Summer,Portugal,2020,global,92369.0,18,169.94736842105263,115
+5 Seconds of Summer,Romania,2018,global,598663.0,260,35.82442748091603,3
+5 Seconds of Summer,Romania,2019,global,1765533.0,365,64.26564885496184,6
+5 Seconds of Summer,Romania,2020,global,879561.0,302,134.69895287958116,48
+5 Seconds of Summer,Romania,2021,global,50443.0,23,188.91304347826087,168
+5 Seconds of Summer,Saudi Arabia,2019,global,72433.0,54,138.5185185185185,74
+5 Seconds of Summer,Saudi Arabia,2020,global,15479.0,14,146.57142857142858,111
+5 Seconds of Summer,Singapore,2018,global,5655643.0,312,49.20234604105572,3
+5 Seconds of Summer,Singapore,2019,global,9304293.0,365,82.35620052770449,11
+5 Seconds of Summer,Singapore,2020,global,2837871.0,301,153.805,57
+5 Seconds of Summer,Singapore,2021,global,282058.0,48,190.79166666666666,170
+5 Seconds of Summer,Slovakia,2018,global,572756.0,275,47.15884476534296,5
+5 Seconds of Summer,Slovakia,2019,global,996943.0,349,80.36860670194004,22
+5 Seconds of Summer,Slovakia,2020,global,348383.0,177,156.6113537117904,52
+5 Seconds of Summer,South Africa,2018,global,672651.0,208,8.995238095238095,2
+5 Seconds of Summer,South Africa,2019,global,1867754.0,365,66.85753052917232,6
+5 Seconds of Summer,South Africa,2020,global,1292639.0,364,87.83333333333333,41
+5 Seconds of Summer,South Africa,2021,global,536709.0,182,149.95604395604394,89
+5 Seconds of Summer,South Korea,2021,global,263773.0,186,153.1236559139785,86
+5 Seconds of Summer,Spain,2018,global,4351904.0,136,144.06617647058823,73
+5 Seconds of Summer,Spain,2019,global,98433.0,3,186.33333333333334,171
+5 Seconds of Summer,Sweden,2018,global,19155688.0,296,48.214046822742475,4
+5 Seconds of Summer,Sweden,2019,global,6017322.0,216,122.15418502202643,39
+5 Seconds of Summer,Sweden,2020,global,153103.0,6,145.5,98
+5 Seconds of Summer,Switzerland,2018,global,2672593.0,250,67.812,12
+5 Seconds of Summer,Switzerland,2019,global,773197.0,125,151.93700787401573,72
+5 Seconds of Summer,Switzerland,2020,global,86480.0,14,150.92857142857142,103
+5 Seconds of Summer,Taiwan,2018,global,2266920.0,282,78.84982935153583,4
+5 Seconds of Summer,Taiwan,2019,global,3199985.0,286,93.43714285714286,14
+5 Seconds of Summer,Taiwan,2020,global,279168.0,33,136.62857142857143,73
+5 Seconds of Summer,Thailand,2018,global,900099.0,238,97.59504132231405,16
+5 Seconds of Summer,Thailand,2019,global,1213680.0,187,130.63274336283186,54
+5 Seconds of Summer,Thailand,2020,global,40768.0,6,181.83333333333334,164
+5 Seconds of Summer,Turkey,2018,global,1100187.0,90,139.04444444444445,85
+5 Seconds of Summer,Turkey,2019,global,43950.0,2,143.0,136
+5 Seconds of Summer,United Arab Emirates,2019,global,134556.0,118,65.57627118644068,38
+5 Seconds of Summer,United Arab Emirates,2020,global,47190.0,41,120.3170731707317,49
+5 Seconds of Summer,United Arab Emirates,2021,global,5916.0,5,188.4,180
+5 Seconds of Summer,United Kingdom,2018,global,47871001.0,309,65.24477611940299,8
+5 Seconds of Summer,United Kingdom,2019,global,33360015.0,306,120.78251599147121,32
+5 Seconds of Summer,United Kingdom,2020,global,4472260.0,84,171.1494252873563,64
+5 Seconds of Summer,United States,2018,global,144886911.0,288,63.807432432432435,12
+5 Seconds of Summer,United States,2019,global,157229165.0,330,118.94465648854961,18
+5 Seconds of Summer,United States,2020,global,19555054.0,60,157.21052631578948,42
+5 Seconds of Summer,United States,2021,global,280583.0,1,174.0,174
+5 Seconds of Summer,Uruguay,2018,global,80564.0,60,150.43333333333334,92
+5 Seconds of Summer,Uruguay,2019,global,3108.0,2,169.0,158
+5 Seconds of Summer,Vietnam,2018,global,250780.0,158,67.6583850931677,15
+5 Seconds of Summer,Vietnam,2019,global,996600.0,292,126.86895161290323,28
+5 Seconds of Summer,Vietnam,2020,global,2394.0,1,183.0,183
+Alison Wonderland,Australia,2018,home,4839351.0,102,83.20388349514563,37
+Alison Wonderland,Australia,2019,home,32817.0,1,167.0,167
+Alison Wonderland,New Zealand,2018,global,402756.0,60,140.23333333333332,91
+Alison Wonderland,Thailand,2018,global,1503.0,1,191.0,191
+Alison Wonderland,Vietnam,2018,global,1054.0,1,146.0,146
+Angus & Julia Stone,Australia,2017,home,8107804.0,176,105.17894736842105,33
+Angus & Julia Stone,Australia,2018,home,16275907.0,292,87.07534246575342,16
+Angus & Julia Stone,Australia,2019,home,113310.0,4,180.0,173
+Angus & Julia Stone,Australia,2020,home,371907.0,8,154.2,78
+Angus & Julia Stone,Austria,2017,global,6123.0,3,171.33333333333334,138
+Angus & Julia Stone,Belgium,2017,global,3453.0,1,178.0,178
+Angus & Julia Stone,Belgium,2019,global,16289.0,3,174.66666666666666,130
+Angus & Julia Stone,Belgium,2020,global,5999.0,1,181.0,181
+Angus & Julia Stone,Czech Republic,2017,global,1786.0,1,118.0,118
+Angus & Julia Stone,France,2017,global,140840.0,6,166.16666666666666,143
+Angus & Julia Stone,France,2018,global,23247.0,1,187.0,187
+Angus & Julia Stone,Germany,2017,global,29177.0,1,184.0,184
+Angus & Julia Stone,Hungary,2017,global,1519.0,1,106.0,106
+Angus & Julia Stone,Netherlands,2017,global,186989.0,9,158.0,114
+Angus & Julia Stone,Netherlands,2018,global,1492063.0,51,123.58823529411765,57
+Angus & Julia Stone,Netherlands,2019,global,183005.0,6,120.16666666666667,93
+Angus & Julia Stone,Netherlands,2020,global,21070.0,1,196.0,196
+Angus & Julia Stone,New Zealand,2017,global,501975.0,76,138.46052631578948,92
+Angus & Julia Stone,New Zealand,2018,global,798952.0,106,120.82075471698113,72
+Angus & Julia Stone,Poland,2017,global,17210.0,3,145.66666666666666,128
+Angus & Julia Stone,Poland,2018,global,98150.0,11,150.54545454545453,86
+Angus & Julia Stone,Switzerland,2017,global,4194.0,1,130.0,130
+Bag Raiders,Australia,2017,home,2158973.0,102,136.81372549019608,78
+Bag Raiders,Australia,2018,home,259166.0,6,95.83333333333333,46
+Bag Raiders,Austria,2017,global,329937.0,76,76.17105263157895,36
+Bag Raiders,Belgium,2017,global,83191.0,28,157.96428571428572,131
+Bag Raiders,Chile,2017,global,74733.0,8,193.5,183
+Bag Raiders,Czech Republic,2017,global,7939.0,7,187.0,171
+Bag Raiders,Denmark,2017,global,304937.0,29,137.3793103448276,85
+Bag Raiders,Ecuador,2017,global,153822.0,81,139.41975308641975,96
+Bag Raiders,Finland,2017,global,95008.0,15,179.33333333333334,160
+Bag Raiders,France,2017,global,15728.0,1,197.0,197
+Bag Raiders,Germany,2017,global,6461343.0,76,68.82894736842105,27
+Bag Raiders,Germany,2018,global,129171.0,2,131.5,78
+Bag Raiders,Global,2017,global,16651515.0,30,145.6,119
+Bag Raiders,Guatemala,2017,global,15989.0,15,168.46666666666667,152
+Bag Raiders,Honduras,2017,global,4207.0,4,108.25,84
+Bag Raiders,Ireland,2017,global,137663.0,36,132.47222222222223,88
+Bag Raiders,Italy,2017,global,139114.0,14,182.85714285714286,167
+Bag Raiders,Malaysia,2017,global,3224.0,1,181.0,181
+Bag Raiders,Mexico,2017,global,2609528.0,61,150.13114754098362,89
+Bag Raiders,Netherlands,2017,global,168015.0,11,173.1818181818182,159
+Bag Raiders,New Zealand,2017,global,249170.0,43,125.53488372093024,77
+Bag Raiders,Norway,2017,global,664929.0,49,126.57142857142857,85
+Bag Raiders,Paraguay,2017,global,7355.0,7,132.85714285714286,128
+Bag Raiders,Peru,2017,global,20149.0,4,195.5,188
+Bag Raiders,Poland,2017,global,57269.0,14,179.35714285714286,137
+Bag Raiders,Switzerland,2017,global,110176.0,34,139.26470588235293,107
+Bag Raiders,United Kingdom,2017,global,1031240.0,23,152.1304347826087,114
+Ball Park Music,Australia,2018,home,72003.0,3,185.33333333333334,175
+Ball Park Music,Australia,2021,home,708394.0,15,105.0,39
+Bliss n Eso,Australia,2017,home,16407470.0,279,59.815602836879435,21
+Bliss n Eso,Australia,2018,home,2862501.0,87,123.64367816091954,74
+Bliss n Eso,Hungary,2017,global,1080.0,1,156.0,156
+Bliss n Eso,Italy,2017,global,12057.0,1,178.0,178
+Bliss n Eso,New Zealand,2017,global,974896.0,175,141.88571428571427,79
+Bliss n Eso,New Zealand,2018,global,21601.0,4,188.25,177
+Bliss n Eso,Poland,2017,global,4286.0,1,197.0,197
+Boo Seeka,Australia,2017,home,18252.0,1,188.0,188
+Chet Faker,Australia,2017,home,354158.0,24,167.54166666666666,122
+Chet Faker,Australia,2020,home,116555.0,3,142.33333333333334,102
+Chillinit,Australia,2019,home,402975.0,12,153.75,98
+Chillinit,Australia,2020,home,1482560.0,16,134.1891891891892,52
+Chillinit,Australia,2021,home,1024705.0,26,129.0,56
+Client Liaison,Australia,2017,home,246556.0,16,180.3125,133
+Cub Sport,Australia,2017,home,14353.0,1,194.0,194
+Cub Sport,Australia,2019,home,1191579.0,37,168.21621621621622,123
+Empire of the Sun,Australia,2017,home,61160.0,2,152.5,141
+Empire of the Sun,Australia,2018,home,185140.0,7,167.0,117
+Empire of the Sun,Australia,2020,home,156086.0,4,172.75,103
+Empire of the Sun,Australia,2021,home,4116840.0,122,174.13934426229508,110
+Empire of the Sun,Canada,2018,global,26802.0,1,179.0,179
+Empire of the Sun,Hungary,2018,global,2713.0,2,160.5,144
+Empire of the Sun,Ireland,2017,global,6711.0,2,163.0,152
+Empire of the Sun,Ireland,2018,global,6710.0,1,99.0,99
+Empire of the Sun,Latvia,2021,global,4301.0,4,123.0,116
+Empire of the Sun,New Zealand,2018,global,5910.0,1,165.0,165
+Empire of the Sun,New Zealand,2021,global,6006.0,1,198.0,198
+Empire of the Sun,United Kingdom,2017,global,77935.0,2,187.5,176
+Empire of the Sun,United Kingdom,2018,global,74548.0,1,115.0,115
+FISHER,Australia,2018,home,771144.0,26,160.76923076923077,96
+FISHER,Australia,2019,home,3953068.0,95,134.36363636363637,30
+FISHER,Australia,2020,home,72540.0,2,164.0,152
+FISHER,Australia,2021,home,75649.0,2,122.5,110
+FISHER,Austria,2019,global,6300.0,1,158.0,158
+FISHER,Belgium,2018,global,876025.0,112,93.41071428571429,49
+FISHER,Belgium,2019,global,1934922.0,254,147.0193548387097,52
+FISHER,Belgium,2020,global,58432.0,9,189.88888888888889,167
+FISHER,Germany,2019,global,212095.0,1,148.0,121
+FISHER,Germany,2020,global,51764.0,1,167.0,167
+FISHER,Hungary,2018,global,11187.0,6,160.83333333333334,109
+FISHER,Hungary,2019,global,482581.0,217,146.6820276497696,89
+FISHER,Hungary,2020,global,528680.0,207,162.67632850241546,111
+FISHER,Iceland,2019,global,37516.0,34,112.82352941176471,75
+FISHER,Ireland,2018,global,16114.0,3,177.33333333333334,150
+FISHER,Ireland,2019,global,907976.0,138,139.64492753623188,77
+FISHER,Italy,2019,global,34637.0,1,183.0,183
+FISHER,Netherlands,2018,global,1758850.0,63,156.73015873015873,112
+FISHER,Netherlands,2019,global,1220339.0,47,176.80851063829786,146
+FISHER,Netherlands,2020,global,46513.0,2,177.5,173
+FISHER,Netherlands,2021,global,46737.0,2,182.5,176
+FISHER,New Zealand,2019,global,364107.0,55,168.87719298245614,103
+FISHER,Norway,2020,global,31388.0,3,169.66666666666666,154
+FISHER,Romania,2018,global,3807.0,3,153.0,124
+FISHER,Romania,2019,global,14377.0,12,174.41666666666666,129
+FISHER,Slovakia,2020,global,2817.0,2,188.0,178
+FISHER,South Africa,2018,global,1243.0,1,164.0,164
+FISHER,Switzerland,2019,global,219649.0,40,176.5,118
+FISHER,Switzerland,2020,global,158613.0,27,181.33333333333334,135
+FISHER,United Kingdom,2018,global,220189.0,4,164.0,148
+FISHER,United Kingdom,2019,global,5097552.0,89,153.68539325842696,97
+Flume,Australia,2017,home,6054591.0,186,102.02645502645503,30
+Flume,Australia,2018,home,26582.0,1,171.0,171
+Flume,Australia,2019,home,572255.0,2,116.15384615384616,54
+Flume,Australia,2020,home,505118.0,11,137.6153846153846,71
+Flume,Belgium,2017,global,87223.0,34,169.64705882352942,133
+Flume,Canada,2017,global,185953.0,11,176.45454545454547,99
+Flume,Czech Republic,2017,global,7624.0,7,161.28571428571428,148
+Flume,Global,2017,global,4179336.0,11,186.27272727272728,169
+Flume,New Zealand,2017,global,1061203.0,150,109.67333333333333,36
+Flume,New Zealand,2019,global,22939.0,1,131.66666666666666,99
+Flume,Poland,2017,global,50248.0,13,173.0,137
+Flume,Portugal,2017,global,18336.0,8,174.0,142
+Flume,Singapore,2017,global,3213.0,1,189.0,189
+Flume,Switzerland,2017,global,2257.0,1,181.0,181
+Flume,United States,2017,global,4228138.0,27,172.77777777777777,143
+G Flip,Australia,2018,home,2457641.0,67,120.64179104477611,56
+G Flip,Australia,2019,home,5448321.0,128,107.86046511627907,56
+G Flip,Australia,2020,home,464833.0,11,125.63636363636364,65
+G Flip,Australia,2021,home,208527.0,5,126.6,70
+Gang of Youths,Australia,2017,home,19365.0,1,181.0,181
+Gang of Youths,Australia,2018,home,7759745.0,221,145.53586497890296,48
+Gang of Youths,Australia,2019,home,364006.0,12,193.58333333333334,184
+Gang of Youths,Australia,2020,home,709286.0,17,158.85,94
+Gang of Youths,Australia,2021,home,1063024.0,23,114.66666666666667,22
+HAIM,Australia,2017,home,258708.0,13,159.57142857142858,91
+HAIM,Austria,2017,global,5719.0,2,105.0,90
+HAIM,Belgium,2017,global,8988.0,2,107.5,106
+HAIM,Czech Republic,2017,global,10217.0,6,141.83333333333334,63
+HAIM,Germany,2017,global,37407.0,1,163.0,163
+HAIM,Global,2017,global,1278105.0,2,143.5,106
+HAIM,Global,2021,global,763293.0,1,189.0,189
+HAIM,Hungary,2017,global,6242.0,4,101.0,59
+HAIM,Indonesia,2017,global,61614.0,8,139.875,69
+HAIM,Ireland,2017,global,46693.0,10,142.54545454545453,66
+HAIM,Ireland,2021,global,7513.0,1,114.0,114
+HAIM,Japan,2017,global,22806.0,12,141.08333333333334,86
+HAIM,Lithuania,2017,global,1106.0,1,54.0,54
+HAIM,Malaysia,2017,global,4035.0,1,163.0,163
+HAIM,New Zealand,2017,global,9965.0,2,172.0,149
+HAIM,Norway,2017,global,16191.0,1,125.0,125
+HAIM,Poland,2017,global,17687.0,2,70.5,64
+HAIM,Portugal,2017,global,5658.0,2,156.0,114
+HAIM,Slovakia,2017,global,1077.0,1,61.0,61
+HAIM,Sweden,2017,global,54475.0,2,110.5,76
+HAIM,Switzerland,2017,global,12312.0,3,129.0,80
+HAIM,Taiwan,2017,global,19009.0,5,150.0,85
+HAIM,Turkey,2017,global,5438.0,1,173.0,173
+HAIM,United Kingdom,2017,global,1411536.0,20,135.85714285714286,58
+HAIM,United Kingdom,2018,global,51866.0,1,195.0,195
+HAIM,United Kingdom,2019,global,123126.0,2,154.0,141
+HAIM,United Kingdom,2020,global,116462.0,1,147.5,121
+HAIM,United Kingdom,2021,global,73700.0,1,93.0,93
+HAIM,United States,2017,global,1040854.0,4,114.5,88
+HAIM,United States,2019,global,498792.0,2,173.0,163
+HAIM,United States,2021,global,339337.0,1,68.0,68
+Hermitude,Australia,2017,home,20287.0,1,155.0,155
+Hiatus Kaiyote,Turkey,2017,global,19355.0,4,176.25,138
+Hilltop Hoods,Australia,2017,home,100175.0,4,144.0,102
+Hilltop Hoods,Australia,2018,home,3218157.0,39,46.875,15
+Hilltop Hoods,Australia,2019,home,20170179.0,314,98.90294117647059,9
+Hilltop Hoods,Australia,2020,home,12803894.0,261,99.82330827067669,44
+Hilltop Hoods,Australia,2021,home,5836040.0,156,146.07051282051282,55
+Hilltop Hoods,New Zealand,2018,global,37547.0,5,146.0,137
+Hilltop Hoods,New Zealand,2019,global,415065.0,57,142.50877192982455,95
+Hooligan Hefs,Australia,2019,home,6820920.0,170,142.00534759358288,58
+Hooligan Hefs,Australia,2020,home,16353734.0,257,128.79365079365078,30
+Hooligan Hefs,Australia,2021,home,9483878.0,162,78.25925925925925,33
+Hooligan Hefs,New Zealand,2020,global,141205.0,21,181.66666666666666,145
+Hooligan Hefs,New Zealand,2021,global,525620.0,72,146.18055555555554,105
+Illy,Australia,2017,home,9127986.0,165,118.07098765432099,30
+Illy,Australia,2019,home,10832110.0,155,88.03626943005182,33
+Illy,New Zealand,2017,global,199035.0,36,121.58333333333333,74
+Kylie Minogue,Australia,2017,home,534087.0,6,125.5,79
+Kylie Minogue,Australia,2018,home,1300303.0,35,155.35135135135135,81
+Kylie Minogue,Australia,2019,home,457537.0,3,105.0,74
+Kylie Minogue,Australia,2020,home,646202.0,4,97.0,54
+Kylie Minogue,Australia,2021,home,493049.0,11,118.36363636363636,64
+Kylie Minogue,Austria,2017,global,119223.0,27,132.14814814814815,40
+Kylie Minogue,Austria,2018,global,204487.0,27,102.74074074074075,28
+Kylie Minogue,Austria,2019,global,238699.0,27,110.22222222222223,31
+Kylie Minogue,Austria,2020,global,373705.0,30,68.46666666666667,26
+Kylie Minogue,Austria,2021,global,464859.0,34,67.3529411764706,28
+Kylie Minogue,Belgium,2017,global,27339.0,4,162.0,94
+Kylie Minogue,Belgium,2018,global,148915.0,13,113.38461538461539,34
+Kylie Minogue,Belgium,2019,global,129708.0,10,124.3,46
+Kylie Minogue,Belgium,2020,global,266310.0,17,111.52941176470588,23
+Kylie Minogue,Bulgaria,2018,global,1442.0,1,35.0,35
+Kylie Minogue,Bulgaria,2019,global,1390.0,1,60.0,60
+Kylie Minogue,Bulgaria,2020,global,4255.0,2,38.5,26
+Kylie Minogue,Bulgaria,2021,global,5565.0,3,82.66666666666667,36
+Kylie Minogue,Canada,2017,global,38768.0,1,147.0,147
+Kylie Minogue,Canada,2018,global,793042.0,16,133.125,56
+Kylie Minogue,Canada,2019,global,476597.0,8,134.375,69
+Kylie Minogue,Canada,2020,global,1579919.0,22,89.36363636363636,30
+Kylie Minogue,Canada,2021,global,594942.0,14,150.5,85
+Kylie Minogue,Czech Republic,2017,global,9571.0,4,164.25,130
+Kylie Minogue,Czech Republic,2018,global,65686.0,18,134.61111111111111,50
+Kylie Minogue,Czech Republic,2019,global,31641.0,6,144.16666666666666,116
+Kylie Minogue,Czech Republic,2020,global,77598.0,11,122.36363636363636,76
+Kylie Minogue,Denmark,2017,global,875311.0,34,79.57142857142857,33
+Kylie Minogue,Denmark,2018,global,983330.0,39,82.2,34
+Kylie Minogue,Denmark,2019,global,708976.0,33,98.45454545454545,47
+Kylie Minogue,Denmark,2020,global,393577.0,24,143.45833333333334,82
+Kylie Minogue,Denmark,2021,global,38236.0,3,143.66666666666666,118
+Kylie Minogue,Estonia,2018,global,7017.0,4,49.25,33
+Kylie Minogue,Estonia,2019,global,3237.0,2,85.0,63
+Kylie Minogue,Estonia,2020,global,17747.0,12,80.91666666666667,27
+Kylie Minogue,Estonia,2021,global,1043.0,1,94.0,94
+Kylie Minogue,Finland,2017,global,84816.0,4,133.16666666666666,64
+Kylie Minogue,Finland,2018,global,179324.0,11,125.28571428571429,49
+Kylie Minogue,Finland,2019,global,182789.0,11,118.14285714285714,39
+Kylie Minogue,Finland,2020,global,143129.0,11,113.0,52
+Kylie Minogue,France,2017,global,99354.0,2,101.5,59
+Kylie Minogue,France,2018,global,121421.0,2,94.5,72
+Kylie Minogue,France,2019,global,154680.0,2,103.5,73
+Kylie Minogue,Germany,2017,global,1265309.0,14,123.07142857142857,31
+Kylie Minogue,Germany,2018,global,2362439.0,21,109.38095238095238,27
+Kylie Minogue,Germany,2019,global,1994915.0,14,111.85714285714286,30
+Kylie Minogue,Germany,2020,global,4166194.0,28,97.57142857142857,27
+Kylie Minogue,Germany,2021,global,639432.0,6,120.33333333333333,44
+Kylie Minogue,Global,2017,global,4900841.0,5,122.0,53
+Kylie Minogue,Global,2018,global,17903066.0,17,130.2941176470588,39
+Kylie Minogue,Global,2019,global,12719510.0,11,130.8181818181818,50
+Kylie Minogue,Global,2020,global,29391799.0,22,119.68181818181819,26
+Kylie Minogue,Global,2021,global,8964691.0,9,137.66666666666666,93
+Kylie Minogue,Greece,2017,global,3605.0,3,101.66666666666667,83
+Kylie Minogue,Greece,2018,global,38808.0,26,122.26923076923077,40
+Kylie Minogue,Greece,2019,global,8912.0,3,132.66666666666666,101
+Kylie Minogue,Greece,2020,global,12130.0,2,93.5,89
+Kylie Minogue,Hong Kong,2017,global,34360.0,9,128.72727272727272,34
+Kylie Minogue,Hong Kong,2018,global,20128.0,5,116.6,39
+Kylie Minogue,Hong Kong,2019,global,10547.0,2,78.5,63
+Kylie Minogue,Hong Kong,2020,global,63123.0,11,108.0909090909091,19
+Kylie Minogue,Hungary,2017,global,30956.0,10,113.45454545454545,48
+Kylie Minogue,Hungary,2018,global,101601.0,24,99.375,30
+Kylie Minogue,Hungary,2019,global,78246.0,16,130.3125,48
+Kylie Minogue,Hungary,2020,global,168766.0,22,87.0,23
+Kylie Minogue,Hungary,2021,global,3335.0,1,168.0,168
+Kylie Minogue,Iceland,2018,global,9013.0,6,157.33333333333334,115
+Kylie Minogue,Iceland,2019,global,3124.0,2,185.0,177
+Kylie Minogue,Iceland,2020,global,6125.0,4,174.75,154
+Kylie Minogue,Ireland,2017,global,418365.0,33,104.98039215686275,23
+Kylie Minogue,Ireland,2018,global,514199.0,34,99.04761904761905,24
+Kylie Minogue,Ireland,2019,global,363596.0,28,94.82142857142857,37
+Kylie Minogue,Ireland,2020,global,578805.0,30,71.26666666666667,24
+Kylie Minogue,Ireland,2021,global,50382.0,6,117.83333333333333,80
+Kylie Minogue,Israel,2018,global,1063.0,1,87.0,87
+Kylie Minogue,Italy,2017,global,850437.0,15,125.65384615384616,13
+Kylie Minogue,Italy,2018,global,506386.0,5,125.88888888888889,46
+Kylie Minogue,Italy,2019,global,497446.0,4,118.71428571428571,52
+Kylie Minogue,Italy,2020,global,736768.0,5,100.9090909090909,40
+Kylie Minogue,Japan,2018,global,37597.0,4,143.5,94
+Kylie Minogue,Latvia,2017,global,3663.0,3,91.0,83
+Kylie Minogue,Latvia,2018,global,23249.0,13,58.46153846153846,24
+Kylie Minogue,Latvia,2019,global,25296.0,15,72.53333333333333,25
+Kylie Minogue,Latvia,2020,global,48292.0,23,57.875,19
+Kylie Minogue,Latvia,2021,global,1442.0,1,71.0,71
+Kylie Minogue,Lithuania,2017,global,2384.0,2,72.0,62
+Kylie Minogue,Lithuania,2018,global,16830.0,10,56.7,30
+Kylie Minogue,Lithuania,2019,global,14422.0,9,86.22222222222223,47
+Kylie Minogue,Lithuania,2020,global,41234.0,22,73.04545454545455,21
+Kylie Minogue,Luxembourg,2018,global,4071.0,2,34.0,33
+Kylie Minogue,Luxembourg,2019,global,4131.0,2,45.5,42
+Kylie Minogue,Luxembourg,2020,global,16440.0,8,36.375,19
+Kylie Minogue,Malaysia,2018,global,14270.0,2,123.5,120
+Kylie Minogue,Malaysia,2019,global,6241.0,1,184.0,184
+Kylie Minogue,Malaysia,2020,global,28093.0,2,55.5,50
+Kylie Minogue,Netherlands,2017,global,71294.0,2,136.5,124
+Kylie Minogue,Netherlands,2018,global,632265.0,13,116.76923076923077,52
+Kylie Minogue,Netherlands,2019,global,729451.0,13,118.78571428571429,37
+Kylie Minogue,Netherlands,2020,global,1239602.0,22,107.0909090909091,26
+Kylie Minogue,New Zealand,2017,global,98839.0,5,127.125,90
+Kylie Minogue,New Zealand,2018,global,130448.0,6,123.77777777777777,71
+Kylie Minogue,New Zealand,2019,global,87437.0,3,112.8,81
+Kylie Minogue,New Zealand,2020,global,135148.0,4,93.0,56
+Kylie Minogue,Norway,2017,global,584433.0,27,92.74074074074075,42
+Kylie Minogue,Norway,2018,global,687651.0,30,95.0,40
+Kylie Minogue,Norway,2019,global,493651.0,26,125.65384615384616,59
+Kylie Minogue,Norway,2020,global,619655.0,29,106.93103448275862,40
+Kylie Minogue,Norway,2021,global,54083.0,4,143.5,109
+Kylie Minogue,Philippines,2018,global,31187.0,1,146.0,146
+Kylie Minogue,Philippines,2020,global,118312.0,2,81.0,54
+Kylie Minogue,Poland,2017,global,732394.0,28,86.04166666666667,10
+Kylie Minogue,Poland,2018,global,1225543.0,27,74.25,11
+Kylie Minogue,Poland,2019,global,1461000.0,26,93.52272727272727,17
+Kylie Minogue,Poland,2020,global,1339455.0,27,86.57575757575758,25
+Kylie Minogue,Portugal,2017,global,15697.0,4,120.0,69
+Kylie Minogue,Portugal,2018,global,32633.0,5,106.2,44
+Kylie Minogue,Portugal,2019,global,30243.0,4,121.25,64
+Kylie Minogue,Portugal,2020,global,52939.0,4,93.25,30
+Kylie Minogue,Romania,2018,global,21408.0,13,129.3846153846154,40
+Kylie Minogue,Romania,2019,global,9060.0,4,146.75,92
+Kylie Minogue,Romania,2020,global,48079.0,15,130.86666666666667,30
+Kylie Minogue,Russia,2020,global,41507.0,1,83.5,62
+Kylie Minogue,Singapore,2018,global,33097.0,4,120.5,68
+Kylie Minogue,Singapore,2019,global,20173.0,2,104.0,104
+Kylie Minogue,Singapore,2020,global,125725.0,11,98.9090909090909,20
+Kylie Minogue,Slovakia,2017,global,2401.0,2,101.5,92
+Kylie Minogue,Slovakia,2018,global,38315.0,21,101.71428571428571,37
+Kylie Minogue,Slovakia,2019,global,18210.0,8,137.75,84
+Kylie Minogue,Slovakia,2020,global,54747.0,20,113.2,51
+Kylie Minogue,South Africa,2018,global,7421.0,2,37.5,35
+Kylie Minogue,South Africa,2019,global,9643.0,2,72.5,63
+Kylie Minogue,South Africa,2020,global,23912.0,2,30.5,29
+Kylie Minogue,Spain,2017,global,51826.0,2,147.5,147
+Kylie Minogue,Spain,2018,global,76257.0,2,161.5,154
+Kylie Minogue,Spain,2019,global,46791.0,1,191.0,191
+Kylie Minogue,Spain,2020,global,134598.0,2,106.0,100
+Kylie Minogue,Sweden,2018,global,413645.0,12,142.08333333333334,106
+Kylie Minogue,Sweden,2019,global,158942.0,4,166.0,138
+Kylie Minogue,Sweden,2020,global,281630.0,7,149.85714285714286,111
+Kylie Minogue,Sweden,2021,global,27322.0,1,164.0,164
+Kylie Minogue,Switzerland,2017,global,97931.0,12,114.25,19
+Kylie Minogue,Switzerland,2018,global,209989.0,17,92.76470588235294,27
+Kylie Minogue,Switzerland,2019,global,194553.0,15,101.13333333333334,33
+Kylie Minogue,Switzerland,2020,global,386805.0,24,77.04166666666667,21
+Kylie Minogue,Switzerland,2021,global,73501.0,7,95.42857142857143,40
+Kylie Minogue,Taiwan,2017,global,13678.0,3,113.33333333333333,83
+Kylie Minogue,Taiwan,2018,global,22974.0,6,167.16666666666666,102
+Kylie Minogue,Taiwan,2020,global,19759.0,2,122.5,107
+Kylie Minogue,Thailand,2018,global,1872.0,1,116.0,116
+Kylie Minogue,Thailand,2020,global,8818.0,1,162.0,162
+Kylie Minogue,Ukraine,2020,global,9628.0,1,59.5,45
+Kylie Minogue,United Arab Emirates,2019,global,3513.0,2,80.0,79
+Kylie Minogue,United Arab Emirates,2020,global,31979.0,13,123.84615384615384,20
+Kylie Minogue,United Arab Emirates,2021,global,16861.0,6,108.83333333333333,36
+Kylie Minogue,United Kingdom,2017,global,5608015.0,34,89.6875,20
+Kylie Minogue,United Kingdom,2018,global,6508073.0,35,84.77272727272727,21
+Kylie Minogue,United Kingdom,2019,global,4370997.0,28,81.33333333333333,30
+Kylie Minogue,United Kingdom,2020,global,7023807.0,33,69.94594594594595,23
+Kylie Minogue,United Kingdom,2021,global,1589804.0,12,92.14285714285714,37
+Kylie Minogue,United States,2018,global,1169169.0,3,136.33333333333334,81
+Kylie Minogue,United States,2019,global,893103.0,2,114.5,92
+Kylie Minogue,United States,2020,global,7211903.0,20,135.65,44
+Kylie Minogue,United States,2021,global,1225487.0,3,136.66666666666666,107
+Kylie Minogue,Vietnam,2018,global,1273.0,1,108.0,108
+Kylie Minogue,Vietnam,2020,global,5039.0,1,158.0,158
+Little May,Sweden,2017,global,44361.0,3,175.0,166
+Mallrat,Australia,2017,home,109074.0,5,182.2,167
+Mallrat,Australia,2018,home,5824620.0,166,121.76506024096386,70
+Mallrat,Australia,2019,home,11570733.0,277,138.37025316455697,45
+Mallrat,Australia,2020,home,3268900.0,78,136.0632911392405,37
+Mallrat,Australia,2021,home,70042.0,2,166.0,145
+Mansionair,Australia,2017,home,72676.0,3,156.0,134
+Mansionair,Australia,2018,home,1398919.0,54,164.5,117
+Matt Corby,Australia,2018,home,310483.0,10,161.9,119
+Matt Corby,Australia,2019,home,3274381.0,93,141.31182795698925,98
+Matt Corby,Australia,2020,home,230336.0,6,145.0,84
+Matt Corby,New Zealand,2019,global,5620.0,1,195.0,195
+Methyl Ethel,Australia,2017,home,48779.0,3,190.66666666666666,185
+Methyl Ethel,Australia,2018,home,411360.0,14,146.92857142857142,75
+ONEFOUR,Australia,2019,home,19672412.0,206,121.05761316872427,39
+ONEFOUR,Australia,2020,home,6146877.0,98,131.92028985507247,31
+ONEFOUR,Australia,2021,home,808707.0,17,100.70588235294117,50
+ONEFOUR,New Zealand,2019,global,1394933.0,113,143.25257731958763,59
+ONEFOUR,New Zealand,2020,global,534063.0,56,110.78571428571429,46
+ONEFOUR,New Zealand,2021,global,44886.0,6,138.33333333333334,100
+Ocean Alley,Australia,2018,home,1872362.0,70,172.75714285714287,117
+Ocean Alley,Australia,2019,home,22043535.0,363,92.38372093023256,4
+Ocean Alley,Australia,2020,home,14319123.0,362,137.3921052631579,79
+Ocean Alley,Australia,2021,home,5015289.0,140,158.38297872340425,103
+Ocean Alley,New Zealand,2019,global,634032.0,100,179.09,133
+Ocean Alley,New Zealand,2020,global,776434.0,108,163.27777777777777,100
+Ocean Alley,New Zealand,2021,global,205477.0,30,184.36666666666667,159
+PNAU,Australia,2017,home,23039197.0,360,77.38647342995169,5
+PNAU,Australia,2018,home,23343626.0,327,112.4989247311828,8
+PNAU,Australia,2019,home,1001238.0,31,158.0,120
+PNAU,Ireland,2018,global,4047.0,1,190.0,190
+PNAU,New Zealand,2017,global,1561638.0,184,98.78804347826087,36
+PNAU,New Zealand,2018,global,1049196.0,119,91.21848739495799,63
+Paul Kelly,Australia,2017,home,721080.0,16,137.8125,23
+Paul Kelly,Australia,2018,home,708149.0,9,93.77777777777777,34
+Paul Kelly,Australia,2019,home,835863.0,12,120.41666666666667,36
+Paul Kelly,Australia,2020,home,1225939.0,15,104.13333333333334,27
+Paul Kelly,Australia,2021,home,310771.0,7,131.0,58
+Paul Kelly,New Zealand,2017,global,67667.0,4,100.75,44
+Paul Kelly,New Zealand,2018,global,72342.0,4,110.5,53
+Paul Kelly,New Zealand,2019,global,62158.0,3,100.66666666666667,61
+Paul Kelly,New Zealand,2020,global,77300.0,3,79.66666666666667,53
+Peking Duk,Australia,2017,home,11390646.0,205,74.78536585365853,10
+Peking Duk,Australia,2018,home,21978385.0,312,60.140127388535035,15
+Peking Duk,Australia,2019,home,4474553.0,121,138.1900826446281,54
+Peking Duk,New Zealand,2017,global,1654134.0,140,73.07857142857142,25
+Peking Duk,New Zealand,2018,global,949986.0,142,144.72535211267606,76
+Peking Duk,New Zealand,2019,global,167052.0,21,117.28571428571429,80
+Pendulum,Finland,2017,global,13612.0,1,164.0,164
+Pendulum,Finland,2020,global,23818.0,3,156.33333333333334,97
+Pendulum,United Kingdom,2020,global,55782.0,1,165.0,165
+Ruel,Australia,2017,home,16834.0,1,194.0,194
+Ruel,Australia,2018,home,10308126.0,210,88.3716814159292,27
+Ruel,Australia,2019,home,27552840.0,324,112.97746967071058,21
+Ruel,Australia,2020,home,6075291.0,171,144.28070175438597,85
+Ruel,Australia,2021,home,858085.0,20,130.35,52
+Ruel,Malaysia,2019,global,45532.0,7,164.14285714285714,143
+Ruel,Malaysia,2020,global,185979.0,27,174.8148148148148,122
+Ruel,New Zealand,2018,global,732558.0,110,145.1818181818182,58
+Ruel,New Zealand,2019,global,1894476.0,209,131.87258687258688,63
+Ruel,New Zealand,2020,global,71882.0,13,187.3846153846154,154
+Ruel,Singapore,2019,global,12995.0,2,193.5,192
+Ruel,Singapore,2020,global,13205.0,2,185.5,178
+Ruel,South Korea,2021,global,156362.0,122,159.54918032786884,98
+Ruel,Taiwan,2018,global,5376.0,1,86.0,86
+Ruel,Taiwan,2019,global,6017.0,1,149.0,149
+Ruel,Thailand,2019,global,307630.0,61,140.39344262295083,78
+Ruel,Thailand,2020,global,151080.0,18,164.94444444444446,125
+RÜFÜS DU SOL,Australia,2017,home,1289270.0,75,173.2469135802469,131
+RÜFÜS DU SOL,Australia,2018,home,4796475.0,79,121.71875,48
+RÜFÜS DU SOL,Australia,2019,home,1134880.0,26,166.2058823529412,100
+RÜFÜS DU SOL,Australia,2020,home,244032.0,6,133.33333333333334,61
+RÜFÜS DU SOL,Australia,2021,home,6760222.0,127,101.98026315789474,34
+RÜFÜS DU SOL,Hungary,2018,global,1440.0,1,182.0,182
+RÜFÜS DU SOL,Lithuania,2021,global,33043.0,29,138.41379310344828,102
+RÜFÜS DU SOL,New Zealand,2018,global,69923.0,13,189.6153846153846,154
+Savage Garden,Australia,2017,home,19352.0,1,174.0,174
+Savage Garden,France,2017,global,18238.0,1,186.0,186
+Savage Garden,Ireland,2017,global,3548.0,1,120.0,120
+Savage Garden,Ireland,2018,global,4884.0,1,156.0,156
+Savage Garden,Philippines,2018,global,374514.0,15,186.5625,177
+Savage Garden,Philippines,2020,global,177202.0,7,192.57142857142858,166
+Savage Garden,United Kingdom,2017,global,47940.0,1,105.0,105
+Savage Garden,United Kingdom,2018,global,162757.0,3,155.0,123
+Sia,Argentina,2017,global,5617942.0,229,143.60703812316714,56
+Sia,Argentina,2018,global,41027.0,2,178.0,158
+Sia,Argentina,2020,global,366186.0,10,145.9,109
+Sia,Argentina,2021,global,2396670.0,69,132.15942028985506,86
+Sia,Australia,2017,home,12775112.0,315,125.37790697674419,42
+Sia,Australia,2018,home,474411.0,13,164.46153846153845,100
+Sia,Australia,2019,home,360041.0,5,124.0,73
+Sia,Australia,2020,home,13798603.0,194,66.9074074074074,12
+Sia,Australia,2021,home,3417373.0,65,94.52173913043478,21
+Sia,Austria,2017,global,1644276.0,201,118.59398496240601,23
+Sia,Austria,2018,global,182821.0,29,120.86206896551724,45
+Sia,Austria,2019,global,277624.0,27,88.5,28
+Sia,Austria,2020,global,1953448.0,222,127.77067669172932,9
+Sia,Austria,2021,global,2014886.0,97,94.79141104294479,5
+Sia,Belgium,2017,global,1760401.0,255,128.88679245283018,22
+Sia,Belgium,2018,global,268009.0,45,165.29787234042553,57
+Sia,Belgium,2019,global,362449.0,46,156.0212765957447,57
+Sia,Belgium,2020,global,2584863.0,192,89.76328502415458,17
+Sia,Belgium,2021,global,879414.0,68,113.71428571428571,27
+Sia,Bolivia,2017,global,53966.0,39,66.5952380952381,40
+Sia,Bolivia,2018,global,1023.0,1,200.0,200
+Sia,Bolivia,2019,global,3195.0,3,199.33333333333334,198
+Sia,Bolivia,2020,global,37385.0,12,122.5,77
+Sia,Bolivia,2021,global,306345.0,89,100.57303370786516,61
+Sia,Brazil,2017,global,16842954.0,224,142.58529411764707,35
+Sia,Brazil,2018,global,52756.0,1,185.0,185
+Sia,Brazil,2021,global,4734181.0,38,148.89473684210526,82
+Sia,Bulgaria,2019,global,1061.0,1,101.0,101
+Sia,Bulgaria,2020,global,28716.0,17,62.388888888888886,20
+Sia,Bulgaria,2021,global,53434.0,24,48.19230769230769,10
+Sia,Canada,2017,global,8343716.0,200,135.38622754491018,22
+Sia,Canada,2018,global,581351.0,13,149.30769230769232,56
+Sia,Canada,2019,global,1016731.0,18,124.22222222222223,61
+Sia,Canada,2020,global,3522972.0,35,93.73913043478261,12
+Sia,Canada,2021,global,4136529.0,72,100.87341772151899,23
+Sia,Chile,2017,global,5333253.0,243,145.65158371040724,51
+Sia,Chile,2018,global,21233.0,1,128.0,128
+Sia,Chile,2020,global,421860.0,12,134.41666666666666,103
+Sia,Chile,2021,global,2390551.0,76,131.80263157894737,103
+Sia,Colombia,2017,global,3514451.0,342,137.3903743315508,25
+Sia,Colombia,2018,global,37099.0,8,179.375,137
+Sia,Colombia,2019,global,5904.0,1,198.0,198
+Sia,Colombia,2020,global,91837.0,8,161.5,131
+Sia,Colombia,2021,global,1002485.0,74,114.77027027027027,73
+Sia,Costa Rica,2017,global,2798730.0,358,127.05902004454343,26
+Sia,Costa Rica,2018,global,159083.0,62,186.15151515151516,104
+Sia,Costa Rica,2019,global,138159.0,37,185.9056603773585,155
+Sia,Costa Rica,2020,global,66020.0,13,112.92307692307692,77
+Sia,Costa Rica,2021,global,339193.0,72,109.59722222222223,73
+Sia,Czech Republic,2017,global,1132777.0,347,119.69305331179322,16
+Sia,Czech Republic,2018,global,539082.0,228,172.80384615384617,41
+Sia,Czech Republic,2019,global,90454.0,17,129.77777777777777,54
+Sia,Czech Republic,2020,global,482125.0,35,97.94545454545455,13
+Sia,Czech Republic,2021,global,463688.0,60,80.15873015873017,29
+Sia,Denmark,2017,global,3472974.0,118,135.03472222222223,50
+Sia,Denmark,2018,global,1557391.0,33,133.10638297872342,47
+Sia,Denmark,2019,global,961502.0,30,141.89655172413794,65
+Sia,Denmark,2020,global,1786398.0,41,107.64285714285714,34
+Sia,Denmark,2021,global,604961.0,41,132.50980392156862,53
+Sia,Dominican Republic,2017,global,123547.0,80,116.15306122448979,58
+Sia,Dominican Republic,2020,global,24821.0,11,150.8181818181818,125
+Sia,Dominican Republic,2021,global,94740.0,48,165.25,133
+Sia,Ecuador,2017,global,733199.0,260,130.19753086419752,34
+Sia,Ecuador,2018,global,2110.0,1,138.0,138
+Sia,Ecuador,2020,global,64627.0,11,137.1818181818182,92
+Sia,Ecuador,2021,global,385986.0,67,130.65671641791045,87
+Sia,Egypt,2020,global,50393.0,26,90.8076923076923,36
+Sia,Egypt,2021,global,265816.0,121,95.38842975206612,42
+Sia,El Salvador,2017,global,106409.0,80,63.6625,33
+Sia,El Salvador,2018,global,1012.0,1,136.0,136
+Sia,El Salvador,2019,global,4184.0,4,192.75,185
+Sia,El Salvador,2020,global,4446.0,2,196.5,193
+Sia,El Salvador,2021,global,162606.0,67,149.32835820895522,112
+Sia,Estonia,2017,global,17308.0,8,43.15384615384615,30
+Sia,Estonia,2018,global,10120.0,5,65.28571428571429,25
+Sia,Estonia,2019,global,9730.0,6,80.85714285714286,51
+Sia,Estonia,2020,global,84821.0,27,49.8421052631579,8
+Sia,Estonia,2021,global,42589.0,30,57.86666666666667,9
+Sia,Finland,2017,global,5305799.0,169,119.21691973969631,7
+Sia,Finland,2018,global,1417811.0,74,120.11504424778761,7
+Sia,Finland,2019,global,1199257.0,35,93.91764705882353,11
+Sia,Finland,2020,global,2176988.0,65,81.21774193548387,1
+Sia,Finland,2021,global,1549471.0,170,117.42786069651741,6
+Sia,France,2017,global,15172367.0,248,102.35412026726058,12
+Sia,France,2018,global,954042.0,26,157.10344827586206,49
+Sia,France,2019,global,7886349.0,109,85.8,35
+Sia,France,2020,global,11069055.0,171,128.71794871794873,27
+Sia,France,2021,global,18816933.0,206,77.65234375,33
+Sia,Germany,2017,global,24366028.0,164,125.33049040511727,20
+Sia,Germany,2018,global,2089485.0,21,122.85714285714286,38
+Sia,Germany,2019,global,1930481.0,13,121.78571428571429,42
+Sia,Germany,2020,global,12492305.0,87,135.67567567567568,15
+Sia,Germany,2021,global,4195383.0,43,109.41304347826087,19
+Sia,Global,2017,global,245090954.0,252,130.26666666666668,27
+Sia,Global,2018,global,15639422.0,17,141.23529411764707,56
+Sia,Global,2019,global,14009174.0,13,133.53846153846155,54
+Sia,Global,2020,global,72875186.0,30,89.53658536585365,9
+Sia,Global,2021,global,156576410.0,109,70.90090090090091,16
+Sia,Greece,2017,global,64330.0,38,55.509803921568626,24
+Sia,Greece,2018,global,22206.0,16,132.6875,57
+Sia,Greece,2019,global,7963.0,3,156.33333333333334,135
+Sia,Greece,2020,global,116938.0,19,95.23809523809524,48
+Sia,Greece,2021,global,59973.0,18,166.33333333333334,104
+Sia,Guatemala,2017,global,267847.0,139,123.4041450777202,41
+Sia,Guatemala,2018,global,6134.0,4,163.0,123
+Sia,Guatemala,2021,global,35409.0,8,192.875,185
+Sia,Honduras,2017,global,99752.0,73,76.0,34
+Sia,Honduras,2020,global,16967.0,10,163.9,144
+Sia,Honduras,2021,global,98108.0,59,154.32203389830508,112
+Sia,Hong Kong,2017,global,626256.0,204,150.01190476190476,17
+Sia,Hong Kong,2018,global,105173.0,43,166.32558139534885,53
+Sia,Hong Kong,2019,global,79729.0,23,139.7826086956522,59
+Sia,Hong Kong,2020,global,148918.0,29,127.61764705882354,25
+Sia,Hungary,2017,global,1000497.0,341,104.35284552845529,7
+Sia,Hungary,2018,global,177684.0,83,149.08695652173913,30
+Sia,Hungary,2019,global,115167.0,26,126.22222222222223,55
+Sia,Hungary,2020,global,556231.0,41,85.49253731343283,6
+Sia,Hungary,2021,global,286008.0,60,115.19402985074628,30
+Sia,Iceland,2017,global,88310.0,41,49.88235294117647,15
+Sia,Iceland,2020,global,71550.0,22,44.608695652173914,5
+Sia,Iceland,2021,global,53526.0,42,77.38095238095238,34
+Sia,India,2020,global,133652.0,3,162.33333333333334,147
+Sia,India,2021,global,10803282.0,164,115.82317073170732,33
+Sia,Indonesia,2017,global,1781543.0,170,126.67873303167421,32
+Sia,Indonesia,2018,global,16348.0,1,196.0,196
+Sia,Indonesia,2020,global,5577196.0,44,64.0,3
+Sia,Indonesia,2021,global,27081972.0,221,62.48473282442748,3
+Sia,Ireland,2017,global,2936331.0,205,123.49913043478261,31
+Sia,Ireland,2018,global,389383.0,31,122.76190476190476,49
+Sia,Ireland,2019,global,257044.0,24,120.33333333333333,63
+Sia,Ireland,2020,global,780631.0,32,89.29787234042553,21
+Sia,Ireland,2021,global,350080.0,40,107.73809523809524,52
+Sia,Israel,2018,global,139393.0,107,159.2429906542056,87
+Sia,Israel,2020,global,101271.0,19,92.36842105263158,63
+Sia,Israel,2021,global,237823.0,51,108.7843137254902,60
+Sia,Italy,2017,global,10791269.0,182,115.91166666666666,19
+Sia,Italy,2018,global,184047.0,5,124.0,99
+Sia,Italy,2019,global,243537.0,4,137.0,78
+Sia,Italy,2020,global,1275898.0,17,82.47368421052632,42
+Sia,Italy,2021,global,2851435.0,52,95.0576923076923,44
+Sia,Japan,2017,global,557404.0,204,137.3767605633803,7
+Sia,Japan,2018,global,70272.0,7,139.375,60
+Sia,Japan,2019,global,43962.0,2,96.0,83
+Sia,Japan,2020,global,75488.0,2,110.5,92
+Sia,Latvia,2017,global,12844.0,8,75.9,39
+Sia,Latvia,2018,global,9319.0,6,72.33333333333333,34
+Sia,Latvia,2019,global,12056.0,8,94.5,73
+Sia,Latvia,2020,global,101842.0,29,69.8125,5
+Sia,Latvia,2021,global,57483.0,38,56.31578947368421,17
+Sia,Lithuania,2017,global,28435.0,17,49.27272727272727,16
+Sia,Lithuania,2018,global,11100.0,7,56.57142857142857,20
+Sia,Lithuania,2019,global,20515.0,14,85.0,50
+Sia,Lithuania,2020,global,113233.0,33,70.51020408163265,4
+Sia,Lithuania,2021,global,71352.0,43,63.06976744186046,13
+Sia,Luxembourg,2017,global,1144.0,1,71.0,71
+Sia,Luxembourg,2018,global,2668.0,2,63.5,60
+Sia,Luxembourg,2019,global,3390.0,2,66.0,62
+Sia,Luxembourg,2020,global,23529.0,8,28.1,14
+Sia,Luxembourg,2021,global,1142.0,1,43.0,43
+Sia,Malaysia,2017,global,1557879.0,199,128.74172185430464,34
+Sia,Malaysia,2018,global,81709.0,14,158.28571428571428,106
+Sia,Malaysia,2019,global,14132.0,2,171.5,164
+Sia,Malaysia,2020,global,793489.0,29,45.29032258064516,2
+Sia,Malaysia,2021,global,1565050.0,122,78.04098360655738,13
+Sia,Mexico,2017,global,15418614.0,202,122.9625850340136,47
+Sia,Mexico,2018,global,63525.0,1,105.0,105
+Sia,Mexico,2020,global,221062.0,2,179.0,176
+Sia,Mexico,2021,global,4088966.0,43,153.32558139534885,119
+Sia,Morocco,2020,global,44206.0,17,80.82352941176471,36
+Sia,Morocco,2021,global,220265.0,87,114.816091954023,37
+Sia,Netherlands,2017,global,6251366.0,134,127.8022813688213,42
+Sia,Netherlands,2018,global,643051.0,13,125.07142857142857,51
+Sia,Netherlands,2019,global,807154.0,17,129.47058823529412,40
+Sia,Netherlands,2020,global,2417646.0,25,89.86842105263158,18
+Sia,Netherlands,2021,global,1331157.0,43,114.27906976744185,59
+Sia,New Zealand,2017,global,3218298.0,331,130.0536398467433,42
+Sia,New Zealand,2018,global,75194.0,8,159.75,89
+Sia,New Zealand,2019,global,48181.0,3,115.66666666666667,90
+Sia,New Zealand,2020,global,597057.0,41,124.29545454545455,11
+Sia,New Zealand,2021,global,137972.0,19,154.3684210526316,103
+Sia,Nicaragua,2020,global,2315.0,2,150.0,137
+Sia,Nicaragua,2021,global,44262.0,41,122.97560975609755,105
+Sia,Norway,2017,global,17714355.0,311,107.07881136950904,4
+Sia,Norway,2018,global,4708820.0,120,94.9875,4
+Sia,Norway,2019,global,3246806.0,63,64.38775510204081,12
+Sia,Norway,2020,global,4832742.0,87,78.83941605839416,1
+Sia,Norway,2021,global,2699803.0,123,131.52380952380952,3
+Sia,Panama,2017,global,143516.0,71,84.21649484536083,38
+Sia,Panama,2018,global,1126.0,1,153.0,153
+Sia,Panama,2020,global,39462.0,14,103.57142857142857,80
+Sia,Panama,2021,global,182764.0,78,116.26923076923077,64
+Sia,Paraguay,2017,global,169678.0,86,95.28205128205128,40
+Sia,Paraguay,2021,global,39058.0,13,184.46153846153845,163
+Sia,Peru,2017,global,1732661.0,172,148.61764705882354,52
+Sia,Peru,2018,global,6710.0,1,154.0,154
+Sia,Peru,2020,global,132837.0,10,153.9,105
+Sia,Peru,2021,global,989626.0,72,130.94444444444446,85
+Sia,Philippines,2017,global,2089351.0,66,131.91489361702128,70
+Sia,Philippines,2018,global,26327.0,1,186.0,186
+Sia,Philippines,2020,global,1219508.0,22,96.30434782608695,18
+Sia,Philippines,2021,global,6815155.0,89,41.17977528089887,15
+Sia,Poland,2017,global,4864188.0,311,121.88500727802038,15
+Sia,Poland,2018,global,2609539.0,185,114.8169014084507,43
+Sia,Poland,2019,global,1430464.0,26,98.6086956521739,25
+Sia,Poland,2020,global,2791963.0,34,63.644067796610166,13
+Sia,Poland,2021,global,867185.0,34,143.7941176470588,38
+Sia,Portugal,2017,global,1285643.0,202,125.3688524590164,31
+Sia,Portugal,2018,global,19130.0,4,133.0,103
+Sia,Portugal,2019,global,27780.0,4,136.5,82
+Sia,Portugal,2020,global,182561.0,17,96.1,46
+Sia,Portugal,2021,global,213518.0,39,142.48717948717947,99
+Sia,Romania,2018,global,10972.0,9,167.0,100
+Sia,Romania,2019,global,8973.0,4,145.25,95
+Sia,Romania,2020,global,169732.0,26,82.6,8
+Sia,Romania,2021,global,137972.0,45,107.04444444444445,60
+Sia,Russia,2020,global,350281.0,19,97.1,23
+Sia,Russia,2021,global,150872.0,13,124.61538461538461,57
+Sia,Saudi Arabia,2019,global,134208.0,99,165.3644859813084,119
+Sia,Saudi Arabia,2020,global,188949.0,71,147.2962962962963,12
+Sia,Saudi Arabia,2021,global,2188376.0,334,110.64788732394366,4
+Sia,Singapore,2017,global,1998547.0,262,135.08333333333334,32
+Sia,Singapore,2018,global,96496.0,15,161.26666666666668,104
+Sia,Singapore,2019,global,21453.0,2,93.0,91
+Sia,Singapore,2020,global,644686.0,27,61.39393939393939,2
+Sia,Singapore,2021,global,762312.0,75,86.68,18
+Sia,Slovakia,2017,global,37545.0,25,66.8,25
+Sia,Slovakia,2018,global,26359.0,18,126.22222222222223,54
+Sia,Slovakia,2019,global,44089.0,22,143.27272727272728,68
+Sia,Slovakia,2020,global,160310.0,34,97.12244897959184,15
+Sia,Slovakia,2021,global,142288.0,57,95.3859649122807,24
+Sia,South Africa,2018,global,9176.0,6,116.83333333333333,76
+Sia,South Africa,2019,global,7600.0,2,118.5,103
+Sia,South Africa,2020,global,52211.0,11,132.07692307692307,47
+Sia,South Korea,2021,global,83377.0,43,126.53488372093024,53
+Sia,Spain,2017,global,9006345.0,196,133.78186968838526,41
+Sia,Spain,2018,global,165824.0,7,166.71428571428572,107
+Sia,Spain,2019,global,52521.0,1,164.0,164
+Sia,Spain,2020,global,1399527.0,16,86.94444444444444,52
+Sia,Spain,2021,global,2110571.0,40,111.925,52
+Sia,Sweden,2017,global,14410601.0,206,118.16122448979591,25
+Sia,Sweden,2018,global,2123075.0,61,132.43661971830986,43
+Sia,Sweden,2019,global,720923.0,20,138.5,63
+Sia,Sweden,2020,global,2014524.0,38,110.12765957446808,21
+Sia,Sweden,2021,global,1424347.0,60,116.55737704918033,59
+Sia,Switzerland,2017,global,1982328.0,255,124.17878192534381,13
+Sia,Switzerland,2018,global,158274.0,16,118.94117647058823,43
+Sia,Switzerland,2019,global,207617.0,18,114.77777777777777,40
+Sia,Switzerland,2020,global,3239376.0,232,116.675,8
+Sia,Switzerland,2021,global,2095725.0,120,119.41869918699187,7
+Sia,Taiwan,2017,global,947273.0,188,137.0,30
+Sia,Taiwan,2018,global,269782.0,50,118.03846153846153,13
+Sia,Taiwan,2019,global,6241.0,1,174.0,174
+Sia,Taiwan,2020,global,565331.0,63,118.64615384615385,55
+Sia,Thailand,2017,global,3634.0,2,117.5,101
+Sia,Thailand,2018,global,25460.0,8,130.0,93
+Sia,Thailand,2020,global,133261.0,13,140.07142857142858,68
+Sia,Thailand,2021,global,27106.0,4,180.5,167
+Sia,Turkey,2017,global,6466586.0,301,111.40998685939553,12
+Sia,Turkey,2018,global,501105.0,57,183.21052631578948,57
+Sia,Turkey,2020,global,607307.0,13,88.38461538461539,36
+Sia,Turkey,2021,global,3197876.0,68,83.5,23
+Sia,Ukraine,2020,global,56639.0,14,70.6,21
+Sia,Ukraine,2021,global,29819.0,13,132.92307692307693,52
+Sia,United Arab Emirates,2019,global,2556.0,2,126.0,111
+Sia,United Arab Emirates,2020,global,76744.0,21,55.52173913043478,16
+Sia,United Arab Emirates,2021,global,348594.0,131,70.54411764705883,9
+Sia,United Kingdom,2017,global,21388939.0,166,127.47860962566845,32
+Sia,United Kingdom,2018,global,4432724.0,31,121.65217391304348,48
+Sia,United Kingdom,2019,global,2912291.0,27,125.58620689655173,52
+Sia,United Kingdom,2020,global,6453539.0,35,96.13461538461539,28
+Sia,United Kingdom,2021,global,3070282.0,28,110.41666666666667,38
+Sia,United States,2017,global,11207753.0,35,149.98387096774192,41
+Sia,United States,2018,global,1684799.0,5,123.6,91
+Sia,United States,2019,global,2052935.0,6,150.66666666666666,84
+Sia,United States,2020,global,10981021.0,20,80.95652173913044,28
+Sia,United States,2021,global,18626710.0,50,114.9423076923077,32
+Sia,Uruguay,2017,global,331568.0,172,136.5201612903226,68
+Sia,Uruguay,2018,global,1588.0,1,151.0,151
+Sia,Uruguay,2020,global,27389.0,11,141.27272727272728,115
+Sia,Uruguay,2021,global,129822.0,58,140.4655172413793,103
+Sia,Vietnam,2018,global,2061.0,2,127.5,113
+Sia,Vietnam,2020,global,249531.0,29,84.13793103448276,23
+Sia,Vietnam,2021,global,753790.0,131,133.59420289855072,67
+Skegss,Australia,2019,home,101430.0,3,160.66666666666666,141
+Spacey Jane,Australia,2020,home,68258.0,1,151.0,144
+Spacey Jane,Australia,2021,home,19322446.0,340,99.27493261455525,4
+Sticky Fingers,Australia,2017,home,45159.0,3,171.0,145
+Sticky Fingers,Australia,2018,home,468035.0,15,142.06666666666666,61
+Sticky Fingers,Australia,2019,home,379101.0,3,161.45454545454547,108
+Sticky Fingers,Australia,2020,home,315716.0,7,160.22222222222223,109
+Sticky Fingers,Australia,2021,home,87676.0,2,95.0,64
+Sticky Fingers,New Zealand,2017,global,675099.0,111,166.15714285714284,89
+Sticky Fingers,New Zealand,2018,global,1703901.0,222,169.59636363636363,67
+Sticky Fingers,New Zealand,2019,global,5181840.0,363,147.36473755047106,56
+Sticky Fingers,New Zealand,2020,global,3297252.0,336,159.32415254237287,67
+Sticky Fingers,New Zealand,2021,global,893798.0,121,155.8095238095238,97
+Tash Sultana,Australia,2017,home,9387315.0,264,148.751677852349,56
+Tash Sultana,Australia,2018,home,2274636.0,59,134.17333333333335,85
+Tash Sultana,Australia,2020,home,2004705.0,60,145.16666666666666,104
+Tash Sultana,Austria,2017,global,6707.0,3,155.0,131
+Tash Sultana,Germany,2017,global,33947.0,1,176.0,176
+Tash Sultana,New Zealand,2017,global,16068.0,3,188.66666666666666,178
+Tash Sultana,New Zealand,2018,global,342431.0,52,167.6949152542373,124
+Tash Sultana,New Zealand,2019,global,5979.0,1,199.0,199
+Tash Sultana,Poland,2018,global,35286.0,4,144.0,98
+Tash Sultana,Turkey,2017,global,126370.0,21,146.5909090909091,91
+The Kid LAROI,Argentina,2021,global,13119625.0,173,72.47976878612717,30
+The Kid LAROI,Australia,2020,home,51934312.0,295,93.96754057428215,1
+The Kid LAROI,Australia,2021,home,142037365.0,353,67.35483870967742,1
+The Kid LAROI,Austria,2020,global,663264.0,62,119.92207792207792,4
+The Kid LAROI,Austria,2021,global,11483960.0,365,53.103960396039604,1
+The Kid LAROI,Belgium,2020,global,1444841.0,81,100.65137614678899,7
+The Kid LAROI,Belgium,2021,global,18369448.0,334,56.48863636363637,1
+The Kid LAROI,Bolivia,2021,global,1875396.0,176,33.23863636363637,8
+The Kid LAROI,Brazil,2021,global,46113998.0,176,65.17613636363636,20
+The Kid LAROI,Bulgaria,2020,global,39325.0,26,59.73076923076923,24
+The Kid LAROI,Bulgaria,2021,global,979542.0,310,26.39937106918239,1
+The Kid LAROI,Canada,2020,global,27081514.0,228,93.719836400818,2
+The Kid LAROI,Canada,2021,global,89444457.0,349,71.95440729483283,1
+The Kid LAROI,Chile,2021,global,12161780.0,145,58.820689655172416,20
+The Kid LAROI,Colombia,2021,global,5667913.0,145,43.98620689655172,15
+The Kid LAROI,Costa Rica,2021,global,1881714.0,145,29.29655172413793,9
+The Kid LAROI,Czech Republic,2020,global,256259.0,31,99.86111111111111,17
+The Kid LAROI,Czech Republic,2021,global,7538624.0,334,61.978886756238005,1
+The Kid LAROI,Denmark,2020,global,4093189.0,121,102.41624365482234,1
+The Kid LAROI,Denmark,2021,global,25444525.0,334,64.61618798955614,1
+The Kid LAROI,Dominican Republic,2021,global,950442.0,145,35.80689655172414,12
+The Kid LAROI,Ecuador,2021,global,2836298.0,145,38.60689655172414,10
+The Kid LAROI,Egypt,2020,global,14961.0,12,172.75,153
+The Kid LAROI,Egypt,2021,global,1138251.0,206,66.94174757281553,5
+The Kid LAROI,El Salvador,2021,global,1309352.0,144,33.736111111111114,6
+The Kid LAROI,Estonia,2020,global,146489.0,76,62.37373737373738,11
+The Kid LAROI,Estonia,2021,global,1088363.0,315,26.27777777777778,1
+The Kid LAROI,Finland,2020,global,1637775.0,81,83.12727272727273,1
+The Kid LAROI,Finland,2021,global,12404955.0,326,57.879472693032014,1
+The Kid LAROI,France,2021,global,39335492.0,299,71.72025723472669,2
+The Kid LAROI,Germany,2020,global,3853291.0,29,84.24137931034483,15
+The Kid LAROI,Germany,2021,global,112916896.0,334,57.24691358024691,1
+The Kid LAROI,Global,2020,global,291550334.0,173,107.78294573643412,11
+The Kid LAROI,Global,2021,global,1788797229.0,354,52.95213675213675,1
+The Kid LAROI,Greece,2020,global,142453.0,31,108.12903225806451,61
+The Kid LAROI,Greece,2021,global,2916239.0,283,67.30344827586207,7
+The Kid LAROI,Guatemala,2021,global,2634262.0,145,35.53793103448276,7
+The Kid LAROI,Honduras,2021,global,1010677.0,145,27.586206896551722,7
+The Kid LAROI,Hong Kong,2020,global,169711.0,43,132.2325581395349,53
+The Kid LAROI,Hong Kong,2021,global,4377994.0,286,52.51633986928105,1
+The Kid LAROI,Hungary,2020,global,736713.0,128,115.8,18
+The Kid LAROI,Hungary,2021,global,5222721.0,334,74.06417112299465,1
+The Kid LAROI,Iceland,2020,global,202428.0,91,82.6218487394958,3
+The Kid LAROI,Iceland,2021,global,1374311.0,323,36.062052505966584,1
+The Kid LAROI,India,2020,global,612078.0,14,158.07142857142858,136
+The Kid LAROI,India,2021,global,64958689.0,273,59.4029304029304,1
+The Kid LAROI,Indonesia,2021,global,39221678.0,146,13.08904109589041,1
+The Kid LAROI,Ireland,2020,global,4210727.0,185,99.27945205479452,4
+The Kid LAROI,Ireland,2021,global,16374345.0,334,61.087218045112785,1
+The Kid LAROI,Israel,2020,global,315673.0,49,141.72857142857143,49
+The Kid LAROI,Israel,2021,global,5371606.0,334,72.05842696629213,2
+The Kid LAROI,Italy,2020,global,99719.0,3,185.33333333333334,184
+The Kid LAROI,Italy,2021,global,37884966.0,208,56.81730769230769,3
+The Kid LAROI,Japan,2021,global,21907003.0,151,26.450331125827816,7
+The Kid LAROI,Latvia,2020,global,196231.0,111,75.45652173913044,6
+The Kid LAROI,Latvia,2021,global,1258093.0,327,34.55635491606714,1
+The Kid LAROI,Lithuania,2020,global,129991.0,76,101.63157894736842,10
+The Kid LAROI,Lithuania,2021,global,1411813.0,334,49.48448687350835,2
+The Kid LAROI,Luxembourg,2020,global,13122.0,10,53.7,27
+The Kid LAROI,Luxembourg,2021,global,68580.0,27,19.0,1
+The Kid LAROI,Malaysia,2020,global,277217.0,26,87.38461538461539,61
+The Kid LAROI,Malaysia,2021,global,12320638.0,318,69.62729658792651,1
+The Kid LAROI,Mexico,2021,global,44448846.0,144,34.770833333333336,6
+The Kid LAROI,Morocco,2020,global,23326.0,15,161.86666666666667,138
+The Kid LAROI,Morocco,2021,global,1214004.0,221,69.21719457013575,6
+The Kid LAROI,Netherlands,2020,global,5216862.0,83,101.91818181818182,15
+The Kid LAROI,Netherlands,2021,global,58385356.0,334,58.07414829659319,1
+The Kid LAROI,New Zealand,2020,global,5593695.0,263,95.99147121535181,7
+The Kid LAROI,New Zealand,2021,global,14914880.0,334,58.57707509881423,1
+The Kid LAROI,Nicaragua,2021,global,482265.0,131,24.48854961832061,7
+The Kid LAROI,Norway,2020,global,9193214.0,120,90.82644628099173,1
+The Kid LAROI,Norway,2021,global,35900537.0,334,67.15189873417721,1
+The Kid LAROI,Panama,2021,global,1346025.0,176,50.5,5
+The Kid LAROI,Paraguay,2021,global,1781156.0,136,61.213235294117645,25
+The Kid LAROI,Peru,2021,global,8698665.0,144,36.548611111111114,7
+The Kid LAROI,Philippines,2020,global,125553.0,4,173.75,142
+The Kid LAROI,Philippines,2021,global,37534294.0,240,69.69583333333334,1
+The Kid LAROI,Poland,2020,global,56709.0,3,174.0,163
+The Kid LAROI,Poland,2021,global,16654977.0,271,59.88363636363636,9
+The Kid LAROI,Portugal,2020,global,1438369.0,161,129.0,21
+The Kid LAROI,Portugal,2021,global,10299175.0,334,70.87286821705426,1
+The Kid LAROI,Romania,2020,global,419156.0,119,121.15172413793104,24
+The Kid LAROI,Romania,2021,global,2542293.0,308,53.53488372093023,2
+The Kid LAROI,Russia,2021,global,9039770.0,147,21.510204081632654,1
+The Kid LAROI,Saudi Arabia,2020,global,130693.0,71,169.50704225352112,91
+The Kid LAROI,Saudi Arabia,2021,global,2780992.0,296,59.43288590604027,1
+The Kid LAROI,Singapore,2020,global,502594.0,28,31.75,17
+The Kid LAROI,Singapore,2021,global,13075228.0,334,60.572649572649574,1
+The Kid LAROI,Slovakia,2020,global,120930.0,48,126.6923076923077,28
+The Kid LAROI,Slovakia,2021,global,2889529.0,334,58.48275862068966,1
+The Kid LAROI,South Africa,2020,global,1028470.0,164,98.7427536231884,7
+The Kid LAROI,South Africa,2021,global,5516355.0,334,65.51851851851852,1
+The Kid LAROI,South Korea,2021,global,2656497.0,260,56.67791411042945,1
+The Kid LAROI,Spain,2021,global,24416904.0,188,75.8563829787234,17
+The Kid LAROI,Sweden,2020,global,5281345.0,68,69.12121212121212,5
+The Kid LAROI,Sweden,2021,global,42050241.0,333,56.38240574506283,1
+The Kid LAROI,Switzerland,2020,global,599792.0,47,109.20754716981132,13
+The Kid LAROI,Switzerland,2021,global,11161991.0,337,51.11001964636542,1
+The Kid LAROI,Taiwan,2020,global,113060.0,14,141.92857142857142,114
+The Kid LAROI,Taiwan,2021,global,7992783.0,283,72.58361774744027,1
+The Kid LAROI,Thailand,2021,global,6178565.0,167,32.55688622754491,1
+The Kid LAROI,Turkey,2021,global,7540242.0,120,85.48333333333333,33
+The Kid LAROI,Ukraine,2020,global,7725.0,4,191.75,182
+The Kid LAROI,Ukraine,2021,global,2138988.0,245,71.21224489795918,1
+The Kid LAROI,United Arab Emirates,2020,global,348033.0,163,95.965,19
+The Kid LAROI,United Arab Emirates,2021,global,3066034.0,355,61.859154929577464,1
+The Kid LAROI,United Kingdom,2020,global,30108770.0,194,111.18579234972678,7
+The Kid LAROI,United Kingdom,2021,global,118257659.0,341,65.99412628487518,1
+The Kid LAROI,United States,2020,global,183056881.0,215,82.6778947368421,6
+The Kid LAROI,United States,2021,global,469828338.0,363,73.87742718446601,1
+The Kid LAROI,Uruguay,2021,global,907103.0,148,61.41216216216216,25
+The Kid LAROI,Vietnam,2021,global,4633259.0,150,12.126666666666667,1
+Thelma Plum,Australia,2018,home,527572.0,19,174.0,145
+Thelma Plum,Australia,2019,home,202386.0,7,187.57142857142858,170
+Thelma Plum,Australia,2020,home,313789.0,8,136.125,76
+Troye Sivan,Australia,2018,home,18508869.0,262,82.83136094674556,17
+Troye Sivan,Australia,2020,home,995097.0,27,153.35714285714286,90
+Troye Sivan,Australia,2021,home,34907.0,1,180.0,180
+Troye Sivan,Austria,2018,global,104711.0,31,134.2258064516129,59
+Troye Sivan,Belgium,2018,global,391744.0,63,101.44444444444444,32
+Troye Sivan,Brazil,2018,global,1156683.0,18,156.5,97
+Troye Sivan,Canada,2018,global,2308484.0,59,113.37704918032787,37
+Troye Sivan,Canada,2020,global,33368.0,1,160.0,160
+Troye Sivan,Canada,2021,global,33440.0,1,186.0,186
+Troye Sivan,Colombia,2018,global,19381.0,4,185.5,177
+Troye Sivan,Costa Rica,2018,global,15670.0,6,154.16666666666666,83
+Troye Sivan,Czech Republic,2018,global,311276.0,100,99.17142857142858,13
+Troye Sivan,Denmark,2017,global,27456.0,3,152.33333333333334,147
+Troye Sivan,Denmark,2018,global,564048.0,46,121.3695652173913,51
+Troye Sivan,Dominican Republic,2018,global,3073.0,3,187.0,173
+Troye Sivan,El Salvador,2018,global,2043.0,2,132.0,122
+Troye Sivan,Estonia,2018,global,43712.0,31,34.5,9
+Troye Sivan,Estonia,2020,global,1371.0,1,43.0,43
+Troye Sivan,Finland,2018,global,352119.0,28,94.96551724137932,46
+Troye Sivan,Finland,2020,global,9116.0,1,111.0,111
+Troye Sivan,France,2018,global,34184.0,1,144.0,144
+Troye Sivan,Germany,2018,global,828447.0,16,139.75,83
+Troye Sivan,Global,2018,global,82052507.0,92,119.93877551020408,25
+Troye Sivan,Global,2020,global,1712591.0,2,125.0,96
+Troye Sivan,Global,2021,global,870300.0,1,167.0,167
+Troye Sivan,Greece,2018,global,138855.0,83,67.66666666666667,13
+Troye Sivan,Guatemala,2018,global,12233.0,9,167.0,131
+Troye Sivan,Hong Kong,2018,global,670074.0,151,116.84848484848484,20
+Troye Sivan,Hong Kong,2020,global,189479.0,56,129.5,61
+Troye Sivan,Hong Kong,2021,global,116189.0,29,143.89655172413794,76
+Troye Sivan,Hungary,2018,global,189409.0,83,95.67045454545455,19
+Troye Sivan,Hungary,2020,global,2903.0,1,143.0,143
+Troye Sivan,Iceland,2018,global,2083.0,2,108.0,101
+Troye Sivan,Indonesia,2017,global,185406.0,36,166.11111111111111,129
+Troye Sivan,Indonesia,2018,global,2100825.0,130,122.72602739726027,44
+Troye Sivan,Indonesia,2020,global,4026826.0,115,172.47826086956522,145
+Troye Sivan,Indonesia,2021,global,21141616.0,334,125.98178137651821,65
+Troye Sivan,Ireland,2018,global,1082003.0,145,112.26451612903226,26
+Troye Sivan,Ireland,2020,global,6211.0,1,166.0,166
+Troye Sivan,Israel,2018,global,22580.0,19,111.57894736842105,50
+Troye Sivan,Italy,2018,global,154994.0,6,168.83333333333334,128
+Troye Sivan,Japan,2018,global,219139.0,40,134.325,60
+Troye Sivan,Latvia,2018,global,62695.0,45,41.5,7
+Troye Sivan,Latvia,2020,global,1168.0,1,73.0,73
+Troye Sivan,Lithuania,2018,global,74440.0,49,40.80392156862745,3
+Troye Sivan,Lithuania,2020,global,2501.0,2,94.0,51
+Troye Sivan,Malaysia,2017,global,194155.0,38,92.65789473684211,73
+Troye Sivan,Malaysia,2018,global,2086133.0,204,103.125,24
+Troye Sivan,Malaysia,2020,global,1710529.0,184,140.71363636363637,65
+Troye Sivan,Malaysia,2021,global,4321834.0,291,109.84182305630027,12
+Troye Sivan,Mexico,2018,global,1824304.0,35,157.0,120
+Troye Sivan,Netherlands,2018,global,845059.0,27,123.78571428571429,62
+Troye Sivan,New Zealand,2018,global,2590775.0,238,98.13805970149254,24
+Troye Sivan,New Zealand,2020,global,51790.0,8,152.0,92
+Troye Sivan,Norway,2018,global,907603.0,56,111.73214285714286,46
+Troye Sivan,Norway,2020,global,17384.0,1,86.0,86
+Troye Sivan,Norway,2021,global,14632.0,1,125.0,125
+Troye Sivan,Panama,2018,global,6413.0,6,182.5,168
+Troye Sivan,Philippines,2017,global,10343538.0,339,126.5811209439528,31
+Troye Sivan,Philippines,2018,global,18446311.0,281,98.24311926605505,23
+Troye Sivan,Philippines,2020,global,5382227.0,157,128.475,88
+Troye Sivan,Philippines,2021,global,18161534.0,334,104.23658536585366,59
+Troye Sivan,Poland,2018,global,1368829.0,119,140.71969696969697,19
+Troye Sivan,Poland,2020,global,15816.0,1,186.0,186
+Troye Sivan,Portugal,2018,global,285598.0,70,132.24657534246575,57
+Troye Sivan,Romania,2018,global,19372.0,14,76.0,30
+Troye Sivan,Romania,2020,global,1949.0,1,146.0,146
+Troye Sivan,Russia,2020,global,13565.0,1,106.0,106
+Troye Sivan,Saudi Arabia,2020,global,1507.0,1,157.0,157
+Troye Sivan,Singapore,2017,global,224567.0,49,136.22448979591837,96
+Troye Sivan,Singapore,2018,global,2515435.0,223,104.93356643356644,33
+Troye Sivan,Singapore,2020,global,1301337.0,141,135.47701149425288,50
+Troye Sivan,Singapore,2021,global,2927880.0,230,107.0223642172524,20
+Troye Sivan,Slovakia,2018,global,87590.0,57,57.58620689655172,15
+Troye Sivan,Slovakia,2020,global,1525.0,1,161.0,161
+Troye Sivan,South Africa,2018,global,5322.0,4,49.25,25
+Troye Sivan,South Africa,2020,global,2046.0,1,147.0,147
+Troye Sivan,South Korea,2021,global,612168.0,287,137.0697050938338,27
+Troye Sivan,Spain,2018,global,45319.0,2,177.5,155
+Troye Sivan,Sweden,2018,global,979466.0,35,99.75,58
+Troye Sivan,Sweden,2020,global,27790.0,1,142.0,142
+Troye Sivan,Sweden,2021,global,22186.0,1,164.0,164
+Troye Sivan,Switzerland,2018,global,130675.0,26,133.69230769230768,56
+Troye Sivan,Taiwan,2018,global,1399225.0,188,100.34615384615384,13
+Troye Sivan,Taiwan,2019,global,4102.0,1,191.0,191
+Troye Sivan,Taiwan,2020,global,385788.0,45,121.06521739130434,61
+Troye Sivan,Taiwan,2021,global,436389.0,48,109.14583333333333,43
+Troye Sivan,Thailand,2018,global,1983188.0,316,90.50325379609545,6
+Troye Sivan,Thailand,2019,global,1818650.0,250,118.42692307692307,62
+Troye Sivan,Thailand,2020,global,4588475.0,366,94.93467336683418,57
+Troye Sivan,Thailand,2021,global,5728631.0,334,73.09615384615384,19
+Troye Sivan,Turkey,2018,global,233714.0,23,138.30434782608697,60
+Troye Sivan,Ukraine,2020,global,3998.0,2,152.0,119
+Troye Sivan,United Arab Emirates,2021,global,1182.0,1,196.0,196
+Troye Sivan,United Kingdom,2018,global,6705307.0,90,116.76842105263158,32
+Troye Sivan,United Kingdom,2020,global,52876.0,1,180.0,180
+Troye Sivan,United States,2018,global,23057012.0,65,113.10958904109589,13
+Troye Sivan,United States,2020,global,1383323.0,5,142.4,77
+Troye Sivan,United States,2021,global,312587.0,1,127.0,127
+Troye Sivan,Vietnam,2018,global,234962.0,114,61.40277777777778,7
+Troye Sivan,Vietnam,2019,global,15683.0,6,171.66666666666666,160
+Troye Sivan,Vietnam,2020,global,113730.0,33,154.24242424242425,74
+Troye Sivan,Vietnam,2021,global,471514.0,54,76.98148148148148,27
+Vance Joy,Australia,2017,home,26770956.0,362,124.12325581395349,26
+Vance Joy,Australia,2018,home,32776758.0,363,119.93428912783752,19
+Vance Joy,Australia,2019,home,12221369.0,361,147.5983606557377,103
+Vance Joy,Australia,2020,home,14940644.0,364,116.21703296703296,59
+Vance Joy,Australia,2021,home,32745303.0,353,63.99293286219081,18
+Vance Joy,Austria,2018,global,4784.0,2,191.5,187
+Vance Joy,Austria,2020,global,131441.0,30,191.5,176
+Vance Joy,Austria,2021,global,2101648.0,347,121.0806916426513,75
+Vance Joy,Belgium,2017,global,94614.0,34,179.21621621621622,129
+Vance Joy,Belgium,2018,global,238226.0,56,167.41071428571428,116
+Vance Joy,Belgium,2019,global,288349.0,54,184.03703703703704,150
+Vance Joy,Belgium,2020,global,1631179.0,233,163.24892703862662,117
+Vance Joy,Belgium,2021,global,3217692.0,334,105.22455089820359,75
+Vance Joy,Canada,2017,global,2938522.0,148,181.01273885350318,106
+Vance Joy,Canada,2018,global,2547777.0,73,175.7422680412371,118
+Vance Joy,Canada,2019,global,518378.0,18,192.88888888888889,183
+Vance Joy,Canada,2020,global,2503951.0,83,190.25301204819277,169
+Vance Joy,Canada,2021,global,16264085.0,279,133.91402714932127,58
+Vance Joy,Costa Rica,2021,global,3117.0,1,198.0,198
+Vance Joy,Czech Republic,2017,global,134783.0,111,174.44642857142858,128
+Vance Joy,Czech Republic,2018,global,454674.0,201,129.44278606965173,61
+Vance Joy,Czech Republic,2019,global,297480.0,98,159.6122448979592,89
+Vance Joy,Czech Republic,2020,global,380142.0,93,178.96774193548387,144
+Vance Joy,Czech Republic,2021,global,1634999.0,306,129.32679738562092,76
+Vance Joy,Denmark,2017,global,7584.0,1,197.0,197
+Vance Joy,Denmark,2018,global,9570.0,1,168.0,168
+Vance Joy,Denmark,2021,global,173758.0,20,159.2,91
+Vance Joy,Estonia,2021,global,14454.0,14,93.5,76
+Vance Joy,Finland,2017,global,7819.0,1,138.0,138
+Vance Joy,Finland,2019,global,8292.0,1,156.0,156
+Vance Joy,Finland,2020,global,7839.0,1,186.0,186
+Vance Joy,Finland,2021,global,5285.0,1,191.0,191
+Vance Joy,France,2017,global,35537.0,2,175.5,154
+Vance Joy,Germany,2017,global,35193.0,1,197.0,197
+Vance Joy,Germany,2021,global,1375231.0,27,190.07407407407408,164
+Vance Joy,Global,2017,global,563560.0,1,150.0,150
+Vance Joy,Global,2018,global,1051351.0,2,199.0,198
+Vance Joy,Global,2020,global,55859924.0,86,184.3953488372093,163
+Vance Joy,Global,2021,global,222752115.0,278,159.9892086330935,114
+Vance Joy,Greece,2018,global,8399.0,8,114.125,90
+Vance Joy,Greece,2019,global,14208.0,10,170.6,138
+Vance Joy,Hong Kong,2017,global,2144.0,1,187.0,187
+Vance Joy,Hungary,2017,global,10856.0,10,157.6,132
+Vance Joy,Hungary,2018,global,130903.0,88,148.52272727272728,80
+Vance Joy,Hungary,2019,global,49651.0,25,168.68,145
+Vance Joy,Hungary,2020,global,175403.0,72,178.81944444444446,140
+Vance Joy,Hungary,2021,global,615979.0,197,169.4517766497462,115
+Vance Joy,Ireland,2017,global,826808.0,236,165.4564315352697,98
+Vance Joy,Ireland,2018,global,1252919.0,239,147.1715481171548,90
+Vance Joy,Ireland,2019,global,1040015.0,179,163.46368715083798,71
+Vance Joy,Ireland,2020,global,2027524.0,305,141.27540983606556,72
+Vance Joy,Ireland,2021,global,2769174.0,334,96.3622754491018,54
+Vance Joy,Israel,2018,global,257033.0,205,139.1951219512195,50
+Vance Joy,Israel,2019,global,8383.0,5,191.2,184
+Vance Joy,Israel,2020,global,48848.0,18,190.0,172
+Vance Joy,Israel,2021,global,1165397.0,295,164.00338983050847,109
+Vance Joy,Italy,2017,global,719599.0,63,164.26984126984127,109
+Vance Joy,Italy,2018,global,21432.0,1,190.0,190
+Vance Joy,Latvia,2019,global,17116.0,16,69.75,54
+Vance Joy,Latvia,2020,global,116737.0,111,108.8018018018018,70
+Vance Joy,Latvia,2021,global,390694.0,320,78.5,50
+Vance Joy,Lithuania,2021,global,152609.0,140,146.94285714285715,107
+Vance Joy,Malaysia,2018,global,4487.0,1,194.0,194
+Vance Joy,Netherlands,2018,global,19063.0,1,189.0,189
+Vance Joy,Netherlands,2021,global,4053395.0,176,177.17045454545453,143
+Vance Joy,New Zealand,2017,global,2196241.0,345,146.87841191066997,84
+Vance Joy,New Zealand,2018,global,1544079.0,244,159.28861788617886,96
+Vance Joy,New Zealand,2019,global,1444194.0,231,171.63203463203465,120
+Vance Joy,New Zealand,2020,global,1752900.0,269,163.76951672862452,126
+Vance Joy,New Zealand,2021,global,2250435.0,328,144.5762195121951,90
+Vance Joy,Norway,2017,global,18359.0,2,186.5,180
+Vance Joy,Norway,2018,global,28928.0,3,191.0,186
+Vance Joy,Norway,2020,global,17526.0,2,197.5,197
+Vance Joy,Norway,2021,global,2704261.0,256,162.23828125,120
+Vance Joy,Poland,2017,global,1785594.0,319,148.50613496932516,57
+Vance Joy,Poland,2018,global,2508173.0,242,127.94779116465864,48
+Vance Joy,Poland,2021,global,1394359.0,70,183.15714285714284,130
+Vance Joy,Portugal,2020,global,19254.0,5,195.4,188
+Vance Joy,Portugal,2021,global,625074.0,115,170.5304347826087,136
+Vance Joy,Romania,2019,global,8143.0,6,191.0,166
+Vance Joy,Singapore,2017,global,4734.0,1,162.0,162
+Vance Joy,Slovakia,2019,global,19680.0,17,154.76470588235293,127
+Vance Joy,Slovakia,2020,global,2620.0,2,189.0,181
+Vance Joy,Slovakia,2021,global,331431.0,188,163.4627659574468,118
+Vance Joy,South Africa,2019,global,46950.0,39,186.43589743589743,153
+Vance Joy,South Africa,2020,global,14605.0,9,189.55555555555554,177
+Vance Joy,South Africa,2021,global,58783.0,22,191.36363636363637,180
+Vance Joy,Sweden,2017,global,163371.0,9,167.33333333333334,123
+Vance Joy,Sweden,2018,global,1258254.0,69,177.14492753623188,103
+Vance Joy,Sweden,2021,global,1974250.0,118,178.38135593220338,139
+Vance Joy,Switzerland,2017,global,357033.0,111,177.57746478873239,106
+Vance Joy,Switzerland,2018,global,23633.0,1,150.4,109
+Vance Joy,Switzerland,2020,global,95759.0,18,187.44444444444446,168
+Vance Joy,Switzerland,2021,global,2112910.0,310,144.13504823151126,91
+Vance Joy,Taiwan,2017,global,2819.0,1,171.0,171
+Vance Joy,Taiwan,2018,global,10168.0,2,89.5,80
+Vance Joy,Thailand,2018,global,1409.0,1,175.0,175
+Vance Joy,United Kingdom,2017,global,6353099.0,150,156.23841059602648,96
+Vance Joy,United Kingdom,2018,global,13885305.0,260,155.8153846153846,95
+Vance Joy,United Kingdom,2019,global,16875040.0,291,148.74570446735396,54
+Vance Joy,United Kingdom,2020,global,23178799.0,354,118.55649717514125,64
+Vance Joy,United Kingdom,2021,global,26840175.0,341,82.18475073313783,51
+Vance Joy,United States,2017,global,672961.0,3,141.0,88
+Vance Joy,United States,2018,global,894349.0,1,173.0,143
+Vance Joy,United States,2020,global,271651.0,1,114.0,114
+Vance Joy,United States,2021,global,10335932.0,50,183.42,129
+Violent Soho,Australia,2017,home,31849.0,2,162.5,136
+Violent Soho,Australia,2020,home,83296.0,2,125.5,96
+Xavier Rudd,Netherlands,2017,global,42272.0,3,199.33333333333334,198
+Ziggy Alberts,Australia,2018,home,149035.0,5,170.8,153
+Ziggy Alberts,Australia,2019,home,2926896.0,84,164.82417582417582,103
+Ziggy Alberts,Australia,2020,home,39698.0,1,140.0,140

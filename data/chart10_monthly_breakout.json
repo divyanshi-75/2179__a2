@@ -1,0 +1,185 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Monthly global streams for top 5 Australian artists - animated breakout timeline.",
+  "width": "container",
+  "height": 400,
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans",
+    "view": { "stroke": "transparent" },
+    "axis": {
+      "domainColor": "rgba(255,255,255,0.08)",
+      "gridColor": "rgba(255,255,255,0.04)",
+      "tickColor": "transparent",
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    },
+    "legend": {
+      "labelColor": "#e0deda",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 13,
+      "orient": "right",
+      "padding": 8
+    }
+  },
+  "data": {
+    "url": "data/aussie_timeline_fixed.csv",
+    "format": { "parse": { "month": "date:'%Y-%m'", "total_streams": "number" } }
+  },
+  "params": [
+    {
+      "name": "current_month",
+      "value": 0,
+      "bind": { "input": "range", "min": 0, "max": 59, "step": 1, "name": "Month: " }
+    }
+  ],
+  "transform": [
+    { "filter": "datum.is_home == 'global' && datum.region == 'Global'" },
+    {
+      "filter": {
+        "field": "artist",
+        "oneOf": ["The Kid LAROI", "5 Seconds of Summer", "Sia", "Vance Joy", "Troye Sivan"]
+      }
+    },
+    { "calculate": "datum.total_streams / 1000000", "as": "streams_M" },
+    { "calculate": "(year(datum.month) - 2017) * 12 + month(datum.month)", "as": "month_idx" }
+  ],
+  "layer": [
+    {
+      "description": "Lines - animated reveal",
+      "transform": [{ "filter": "datum.month_idx <= current_month" }],
+      "params": [
+        { "name": "hover10", "select": { "type": "point", "on": "mouseover", "fields": ["artist"] } }
+      ],
+      "mark": { "type": "line", "interpolate": "monotone", "strokeWidth": 2 },
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "temporal",
+          "title": null,
+          "axis": { "format": "%b %Y", "tickCount": "year", "labelAngle": -30 }
+        },
+        "y": {
+          "field": "streams_M",
+          "type": "quantitative",
+          "title": "Global streams (M)",
+          "scale": { "domainMin": 0 },
+          "axis": { "format": ".2s", "tickCount": 6 }
+        },
+        "color": {
+          "field": "artist",
+          "type": "nominal",
+          "scale": {
+            "domain": ["The Kid LAROI", "5 Seconds of Summer", "Sia", "Vance Joy", "Troye Sivan"],
+            "range": ["#ff8250", "#1DB954", "#64b5f6", "#ce93d8", "#ffd54f"]
+          },
+          "legend": { "title": null }
+        },
+        "opacity": {
+          "condition": { "param": "hover10", "value": 1 },
+          "value": 0.8
+        },
+        "tooltip": [
+          { "field": "artist",    "type": "nominal",     "title": "Artist" },
+          { "field": "month",     "type": "temporal",    "title": "Month",       "format": "%b %Y" },
+          { "field": "streams_M", "type": "quantitative","title": "Streams (M)", "format": ".2f"   }
+        ]
+      }
+    },
+    {
+      "description": "Points - animated reveal",
+      "transform": [{ "filter": "datum.month_idx <= current_month" }],
+      "mark": { "type": "point", "filled": true, "size": 25 },
+      "encoding": {
+        "x": { "field": "month", "type": "temporal" },
+        "y": { "field": "streams_M", "type": "quantitative" },
+        "color": {
+          "field": "artist",
+          "type": "nominal",
+          "scale": {
+            "domain": ["The Kid LAROI", "5 Seconds of Summer", "Sia", "Vance Joy", "Troye Sivan"],
+            "range": ["#ff8250", "#1DB954", "#64b5f6", "#ce93d8", "#ffd54f"]
+          }
+        },
+        "opacity": {
+          "condition": { "param": "hover10", "value": 1 },
+          "value": 0.8
+        }
+      }
+    },
+    {
+      "description": "Vertical rule at current month",
+      "transform": [{ "filter": "datum.month_idx == current_month" }],
+      "mark": {
+        "type": "rule",
+        "color": "rgba(255,255,255,0.3)",
+        "strokeWidth": 1,
+        "strokeDash": [3, 3]
+      },
+      "encoding": {
+        "x": { "field": "month", "type": "temporal" }
+      }
+    },
+    {
+      "description": "Current month label at top of rule",
+      "transform": [
+        { "filter": "datum.month_idx == current_month" },
+        {
+          "aggregate": [{ "op": "min", "field": "month", "as": "month_agg" }],
+          "groupby": ["month_idx"]
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "color": "#f0ede6",
+        "fontWeight": "500",
+        "align": "center",
+        "baseline": "top"
+      },
+      "encoding": {
+        "x": { "field": "month_agg", "type": "temporal" },
+        "y": { "value": 20 },
+        "text": { "field": "month_agg", "type": "temporal", "format": "%b %Y" }
+      }
+    },
+    {
+      "description": "STAY annotation - appears at month 54 (Jul 2021)",
+      "data": { "values": [{ "month": "2021-07-01", "streams_M": 340 }] },
+      "transform": [{ "filter": "current_month >= 54" }],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#ff8250",
+        "fontWeight": "600",
+        "align": "left",
+        "dx": 6
+      },
+      "encoding": {
+        "x": { "field": "month", "type": "temporal" },
+        "y": { "field": "streams_M", "type": "quantitative" },
+        "text": { "value": "STAY feat. Bieber \u2191" }
+      }
+    },
+    {
+      "description": "Youngblood annotation - appears at month 17 (Jun 2018)",
+      "data": { "values": [{ "month": "2018-06-01", "streams_M": 95 }] },
+      "transform": [{ "filter": "current_month >= 17" }],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#1DB954",
+        "fontWeight": "500",
+        "align": "right",
+        "dx": -6
+      },
+      "encoding": {
+        "x": { "field": "month", "type": "temporal" },
+        "y": { "field": "streams_M", "type": "quantitative" },
+        "text": { "value": "Youngblood \u2192" }
+      }
+    }
+  ]
+}

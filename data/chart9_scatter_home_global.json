@@ -1,0 +1,160 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Home heroes vs world conquerors. Home streams (AU) vs global streams per artist · 2017-2021.",
+  "width": "container",
+  "height": 380,
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans",
+    "view": { "stroke": "transparent" },
+    "axis": {
+      "domainColor": "rgba(255,255,255,0.08)",
+      "gridColor": "rgba(255,255,255,0.04)",
+      "tickColor": "transparent",
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    },
+    "legend": {
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": { "url": "data/aussie_artists_aggregated_fixed.csv" },
+      "transform": [
+        { "filter": "datum.is_home == 'home'" },
+        {
+          "aggregate": [{ "op": "sum", "field": "total_streams", "as": "home_streams" }],
+          "groupby": ["artist"]
+        },
+        { "calculate": "datum.home_streams / 1000000", "as": "home_M" },
+        {
+          "lookup": "artist",
+          "from": {
+            "data": { "url": "data/aussie_countries_reached_fixed.csv" },
+            "key": "artist",
+            "fields": ["countries_reached", "global_streams"]
+          }
+        },
+        { "calculate": "datum.global_streams / 1000000", "as": "global_M" },
+        { "filter": "datum.global_M > 0" }
+      ],
+      "mark": { "type": "point", "filled": true, "opacity": 0.85 },
+      "encoding": {
+        "x": {
+          "field": "home_M",
+          "type": "quantitative",
+          "scale": { "type": "log", "zero": false },
+          "title": "Home streams — Australia (M, log scale)",
+          "axis": { "format": ",.0f" }
+        },
+        "y": {
+          "field": "global_M",
+          "type": "quantitative",
+          "scale": { "type": "log", "zero": false },
+          "title": "Global streams (M, log scale)",
+          "axis": { "format": ",.0f" }
+        },
+        "size": {
+          "field": "countries_reached",
+          "type": "quantitative",
+          "scale": { "range": [30, 2000] },
+          "legend": null
+        },
+        "color": {
+          "field": "countries_reached",
+          "type": "quantitative",
+          "scale": { "scheme": "greens", "domainMin": 0 },
+          "legend": {
+            "title": "Countries reached",
+            "titleColor": "#e0deda",
+            "labelColor": "#c8c6c0",
+            "labelFontSize": 11,
+            "titleFontSize": 12,
+            "gradientLength": 100,
+            "gradientThickness": 10,
+            "orient": "right"
+          }
+        },
+        "opacity": {
+          "field": "countries_reached",
+          "type": "quantitative",
+          "scale": { "range": [0.2, 0.95] },
+          "legend": null
+        },
+        "tooltip": [
+          { "field": "artist", "type": "nominal", "title": "Artist" },
+          { "field": "home_M", "type": "quantitative", "title": "Home streams (M)", "format": ",.1f" },
+          { "field": "global_M", "type": "quantitative", "title": "Global streams (M)", "format": ",.1f" },
+          { "field": "countries_reached", "type": "quantitative", "title": "Countries reached" }
+        ]
+      },
+      "params": [
+        { "name": "hover9", "select": { "type": "point", "on": "mouseover", "fields": ["artist"] } }
+      ]
+    },
+    {
+      "data": { "url": "data/aussie_artists_aggregated_fixed.csv" },
+      "transform": [
+        { "filter": "datum.is_home == 'home'" },
+        {
+          "aggregate": [{ "op": "sum", "field": "total_streams", "as": "home_streams" }],
+          "groupby": ["artist"]
+        },
+        { "calculate": "datum.home_streams / 1000000", "as": "home_M" },
+        {
+          "lookup": "artist",
+          "from": {
+            "data": { "url": "data/aussie_countries_reached_fixed.csv" },
+            "key": "artist",
+            "fields": ["countries_reached", "global_streams"]
+          }
+        },
+        { "calculate": "datum.global_streams / 1000000", "as": "global_M" },
+        { "filter": "datum.global_M > 50" }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "dy": -10,
+        "color": "#c8c6c0",
+        "fontWeight": 400
+      },
+      "encoding": {
+        "x": {
+          "field": "home_M",
+          "type": "quantitative",
+          "scale": { "type": "log", "zero": false }
+        },
+        "y": {
+          "field": "global_M",
+          "type": "quantitative",
+          "scale": { "type": "log", "zero": false }
+        },
+        "text": { "field": "artist", "type": "nominal" }
+      }
+    },
+    {
+      "data": {"values": [
+        {"label": "Bigger + darker green"},
+        {"label": "= more countries reached"}
+      ]},
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 10,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "x": {"value": 820},
+        "y": {"field": "label", "type": "nominal", "sort": null, "axis": null},
+        "text": {"field": "label", "type": "nominal"},
+        "color": {"value": "rgba(255,255,255,0.35)"}
+      }
+    }
+  ]
+}

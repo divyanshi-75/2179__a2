@@ -1,0 +1,244 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Home heroes vs world conquerors. Share of total streams from Australia vs globally · 2017-2021.",
+  "width": "container",
+  "height": 900,
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans",
+    "axis": {
+      "domainColor": "rgba(255,255,255,0.08)",
+      "gridColor": "rgba(255,255,255,0.04)",
+      "tickColor": "transparent",
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    },
+    "legend": {
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "orient": "top",
+      "padding": 12
+    },
+    "view": { "stroke": "transparent" }
+  },
+  "data": { "url": "data/aussie_artists_aggregated_fixed.csv" },
+  "transform": [
+    {
+      "aggregate": [{ "op": "sum", "field": "total_streams", "as": "streams" }],
+      "groupby": ["artist", "is_home"]
+    },
+    { "pivot": "is_home", "value": "streams", "groupby": ["artist"] },
+    {
+      "calculate": "(isValid(datum.home) ? datum.home : 0) + (isValid(datum.global) ? datum.global : 0)",
+      "as": "total"
+    },
+    { "filter": "datum.total > 0" },
+    { "fold": ["home", "global"], "as": ["stream_type", "streams_raw"] },
+    {
+      "calculate": "datum.stream_type == 'home' ? 'Home (Australia)' : 'Global'",
+      "as": "type"
+    },
+    { "calculate": "datum.streams_raw / 1000000", "as": "streams_M" },
+    {
+      "calculate": "100 * datum.streams_raw / datum.total",
+      "as": "pct"
+    },
+    { "filter": "datum.streams_M > 0" },
+    { "calculate": "datum.type === 'Home (Australia)' ? -datum.pct : datum.pct", "as": "diverging_pct" },
+    { "calculate": "datum.type === 'Home (Australia)' ? -datum.streams_M : datum.streams_M", "as": "diverging_M" }
+  ],
+  "layer": [
+    {
+      "mark": { "type": "bar", "cornerRadiusEnd": 3 },
+      "params": [
+        { "name": "hover5", "select": { "type": "point", "on": "mouseover", "fields": ["artist"] } }
+      ],
+      "encoding": {
+        "y": {
+          "field": "artist",
+          "type": "nominal",
+          "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" },
+          "title": null,
+          "axis": { "labelColor": "#c8c6c0", "labelFontSize": 11, "labelLimit": 140 }
+        },
+        "x": {
+          "field": "diverging_pct",
+          "type": "quantitative",
+          "title": "<- Home (Australia) · Global ->",
+          "axis": { "format": ".0f", "labelExpr": "abs(datum.value) + '%'" }
+        },
+        "color": {
+          "field": "type",
+          "type": "nominal",
+          "scale": { "domain": ["Home (Australia)", "Global"], "range": ["#7B2FBE", "#1DB954"] },
+          "legend": { "title": null, "symbolType": "square", "symbolSize": 120 }
+        },
+        "opacity": {
+          "condition": { "param": "hover5", "value": 1 },
+          "value": 0.75
+        },
+        "tooltip": [
+          { "field": "artist", "type": "nominal", "title": "Artist" },
+          { "field": "type", "type": "nominal", "title": "Stream type" },
+          { "field": "streams_M", "type": "quantitative", "title": "Streams (M)", "format": ".1f" },
+          { "field": "pct", "type": "quantitative", "title": "% of total", "format": ".1f" }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "rule", "color": "rgba(255,255,255,0.15)", "strokeWidth": 0.5, "strokeDash": [3, 4] },
+      "encoding": { "x": { "datum": 0 } }
+    },
+    {
+      "mark": { "type": "text", "align": "left", "dx": 4, "fontSize": 9, "color": "#9a9a94" },
+      "transform": [{ "filter": "datum.type === 'Global' && datum.pct >= 90" }],
+      "encoding": {
+        "y": {
+          "field": "artist",
+          "type": "nominal",
+          "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" }
+        },
+        "x": { "datum": 101 },
+        "text": { "value": "world" }
+      }
+    },
+    {
+      "mark": { "type": "text", "align": "right", "dx": -4, "fontSize": 9, "color": "#9a9a94" },
+      "transform": [{ "filter": "datum.type === 'Home (Australia)' && datum.pct >= 90" }],
+      "encoding": {
+        "y": {
+          "field": "artist",
+          "type": "nominal",
+          "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" }
+        },
+        "x": { "datum": -101 },
+        "text": { "value": "home" }
+      }
+    },
+    {
+      "description": "Green annotation rect - global side upper area",
+      "data": { "values": [{ "x1": 43, "x2": 103, "ya": "Boo Seeka", "yb": "G Flip" }] },
+      "mark": { "type": "rect", "color": "rgba(29,185,84,0.08)", "stroke": "rgba(29,185,84,0.25)", "strokeWidth": 1, "cornerRadius": 6 },
+      "encoding": {
+        "x":  { "field": "x1", "type": "quantitative" },
+        "x2": { "field": "x2", "type": "quantitative" },
+        "y":  { "field": "ya", "type": "nominal", "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" } },
+        "y2": { "field": "yb", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Green box text line 1 - title",
+      "data": { "values": [{ "ya": "Boo Seeka", "label": "When they go global..." }] },
+      "mark": { "type": "text", "fontSize": 13, "fontWeight": "600", "color": "#1DB954", "align": "center", "baseline": "top", "dy": 14 },
+      "encoding": {
+        "x": { "datum": 73, "type": "quantitative" },
+        "y": { "field": "ya", "type": "nominal", "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" } },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Green box text line 2",
+      "data": { "values": [{ "ya": "Boo Seeka", "label": "they go BIG. The artists" }] },
+      "mark": { "type": "text", "fontSize": 11, "color": "rgba(255,255,255,0.65)", "align": "center", "baseline": "top", "dy": 30 },
+      "encoding": {
+        "x": { "datum": 73, "type": "quantitative" },
+        "y": { "field": "ya", "type": "nominal", "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" } },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Green box text line 3",
+      "data": { "values": [{ "ya": "Boo Seeka", "label": "tagged 'world' reach" }] },
+      "mark": { "type": "text", "fontSize": 11, "color": "rgba(255,255,255,0.65)", "align": "center", "baseline": "top", "dy": 46 },
+      "encoding": {
+        "x": { "datum": 73, "type": "quantitative" },
+        "y": { "field": "ya", "type": "nominal", "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" } },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Green box text line 4",
+      "data": { "values": [{ "ya": "Boo Seeka", "label": "60-100% global streams." }] },
+      "mark": { "type": "text", "fontSize": 11, "color": "rgba(255,255,255,0.65)", "align": "center", "baseline": "top", "dy": 62 },
+      "encoding": {
+        "x": { "datum": 73, "type": "quantitative" },
+        "y": { "field": "ya", "type": "nominal", "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" } },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Green box text line 5 - emphasis",
+      "data": { "values": [{ "ya": "Boo Seeka", "label": "Rare \u2014 but massive." }] },
+      "mark": { "type": "text", "fontSize": 12, "fontWeight": "600", "color": "#1DB954", "align": "center", "baseline": "top", "dy": 80 },
+      "encoding": {
+        "x": { "datum": 73, "type": "quantitative" },
+        "y": { "field": "ya", "type": "nominal", "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" } },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Purple annotation rect - home side lower area",
+      "data": { "values": [{ "x1": 17, "x2": 77, "ya": "Matt Corby", "yb": "Paul Kelly" }] },
+      "mark": { "type": "rect", "color": "rgba(123,47,190,0.08)", "stroke": "rgba(123,47,190,0.3)", "strokeWidth": 1, "cornerRadius": 6 },
+      "encoding": {
+        "x":  { "field": "x1", "type": "quantitative" },
+        "x2": { "field": "x2", "type": "quantitative" },
+        "y":  { "field": "ya", "type": "nominal", "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" } },
+        "y2": { "field": "yb", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Purple box text line 1 - title",
+      "data": { "values": [{ "ya": "Matt Corby", "label": "Home is their world" }] },
+      "mark": { "type": "text", "fontSize": 13, "fontWeight": "600", "color": "#ce93d8", "align": "center", "baseline": "top", "dy": 14 },
+      "encoding": {
+        "x": { "datum": 47, "type": "quantitative" },
+        "y": { "field": "ya", "type": "nominal", "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" } },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Purple box text line 2",
+      "data": { "values": [{ "ya": "Matt Corby", "label": "Many Australian artists" }] },
+      "mark": { "type": "text", "fontSize": 11, "color": "rgba(255,255,255,0.65)", "align": "center", "baseline": "top", "dy": 30 },
+      "encoding": {
+        "x": { "datum": 47, "type": "quantitative" },
+        "y": { "field": "ya", "type": "nominal", "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" } },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Purple box text line 3",
+      "data": { "values": [{ "ya": "Matt Corby", "label": "get 90-99% of streams" }] },
+      "mark": { "type": "text", "fontSize": 11, "color": "rgba(255,255,255,0.65)", "align": "center", "baseline": "top", "dy": 46 },
+      "encoding": {
+        "x": { "datum": 47, "type": "quantitative" },
+        "y": { "field": "ya", "type": "nominal", "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" } },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Purple box text line 4",
+      "data": { "values": [{ "ya": "Matt Corby", "label": "from Australia alone." }] },
+      "mark": { "type": "text", "fontSize": 11, "color": "rgba(255,255,255,0.65)", "align": "center", "baseline": "top", "dy": 62 },
+      "encoding": {
+        "x": { "datum": 47, "type": "quantitative" },
+        "y": { "field": "ya", "type": "nominal", "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" } },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Purple box text line 5 - emphasis",
+      "data": { "values": [{ "ya": "Matt Corby", "label": "Big locally. Unknown globally." }] },
+      "mark": { "type": "text", "fontSize": 12, "fontWeight": "600", "color": "#ce93d8", "align": "center", "baseline": "top", "dy": 80 },
+      "encoding": {
+        "x": { "datum": 47, "type": "quantitative" },
+        "y": { "field": "ya", "type": "nominal", "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" } },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    }
+  ]
+}

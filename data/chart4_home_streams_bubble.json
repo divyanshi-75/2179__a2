@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Top 10 Australian artists by home (Australia) streams. Bubble size = streams that year · 2017-2021.",
+  "width": "container",
+  "height": 340,
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans",
+    "view": { "stroke": "transparent" },
+    "axis": {
+      "domainColor": "rgba(255,255,255,0.08)",
+      "gridColor": "rgba(255,255,255,0.04)",
+      "tickColor": "transparent",
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    },
+    "legend": {
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "orient": "right"
+    }
+  },
+  "data": { "url": "data/aussie_artists_aggregated_fixed.csv" },
+  "transform": [
+    { "filter": "datum.is_home == 'home'" },
+    {
+      "aggregate": [{ "op": "sum", "field": "total_streams", "as": "total_streams" }],
+      "groupby": ["artist", "year"]
+    },
+    { "calculate": "datum.total_streams / 1000000", "as": "home_M" },
+    {
+      "joinaggregate": [{ "op": "sum", "field": "total_streams", "as": "artist_total" }],
+      "groupby": ["artist"]
+    },
+    {
+      "window": [{ "op": "dense_rank", "as": "artist_rank" }],
+      "sort": [{ "field": "artist_total", "order": "descending" }]
+    },
+    { "filter": "datum.artist_rank <= 10" },
+    { "filter": "datum.home_M > 0" },
+    { "calculate": "toString(datum.year)", "as": "year" }
+  ],
+  "mark": { "type": "point", "filled": true, "opacity": 0.85 },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": { "labelAngle": 0 }
+    },
+    "y": {
+      "field": "artist",
+      "type": "nominal",
+      "title": null,
+      "sort": { "field": "home_M", "op": "sum", "order": "descending" },
+      "axis": { "labelColor": "#c8c6c0", "labelFontSize": 11, "labelLimit": 160 }
+    },
+    "size": {
+      "field": "home_M",
+      "type": "quantitative",
+      "title": "Home streams (M)",
+      "scale": { "range": [40, 2800] },
+      "legend": { "title": "Home streams (M)", "orient": "right" }
+    },
+    "color": {
+      "field": "artist",
+      "type": "nominal",
+      "scale": {
+        "domain": ["The Kid LAROI", "5 Seconds of Summer", "Vance Joy", "PNAU", "Ruel", "Ocean Alley", "Hilltop Hoods", "Peking Duk", "Hooligan Hefs", "Sia"],
+        "range": ["#FF8250", "#1DB954", "#C88CFF", "#FFD23C", "#64B4FF", "#FF78B4", "#A8E063", "#F7971E", "#f64f59", "#43CEA2"]
+      },
+      "legend": null
+    },
+    "opacity": {
+      "condition": { "param": "hover4", "value": 1 },
+      "value": 0.65
+    },
+    "tooltip": [
+      { "field": "artist", "type": "nominal", "title": "Artist" },
+      { "field": "year", "type": "ordinal", "title": "Year" },
+      { "field": "home_M", "type": "quantitative", "title": "Home streams (M)", "format": ".1f" }
+    ]
+  },
+  "params": [
+    { "name": "hover4", "select": { "type": "point", "on": "mouseover", "fields": ["artist"] } }
+  ]
+}

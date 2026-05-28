@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Top Australian artists by global streams. Square size = total global streams. Spotify Top 200 · 2017-2021.",
+  "width": "container",
+  "height": 340,
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans",
+    "view": { "stroke": "transparent" },
+    "axis": {
+      "domainColor": "rgba(255,255,255,0.08)",
+      "gridColor": "rgba(255,255,255,0.04)",
+      "tickColor": "transparent",
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    },
+    "legend": {
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "orient": "top",
+      "padding": 12
+    }
+  },
+  "data": { "url": "data/aussie_countries_reached_fixed.csv" },
+  "transform": [
+    {
+      "window": [{ "op": "rank", "as": "rank" }],
+      "sort": [{ "field": "global_streams", "order": "descending" }]
+    },
+    { "filter": "datum.rank <= 8" },
+    { "calculate": "datum.global_streams / 1000000000", "as": "streams_B" }
+  ],
+  "mark": {
+    "type": "point",
+    "shape": "square",
+    "filled": true,
+    "opacity": 0.88
+  },
+  "encoding": {
+    "x": {
+      "field": "artist",
+      "type": "nominal",
+      "title": null,
+      "sort": { "field": "streams_B", "order": "descending" },
+      "axis": { "labelAngle": -28, "labelColor": "#c8c6c0", "labelFontSize": 12 }
+    },
+    "y": {
+      "field": "streams_B",
+      "type": "quantitative",
+      "title": "Global streams (billions)",
+      "axis": { "format": ".2f" }
+    },
+    "size": {
+      "field": "streams_B",
+      "type": "quantitative",
+      "scale": { "range": [120, 5000] },
+      "legend": null
+    },
+    "color": {
+      "field": "countries_reached",
+      "type": "quantitative",
+      "title": "Countries reached",
+      "scale": { "scheme": "greens", "domain": [10, 70] },
+      "legend": { "title": "Countries reached", "orient": "right" }
+    },
+    "opacity": {
+      "condition": { "param": "hover1", "value": 1 },
+      "value": 0.75
+    },
+    "tooltip": [
+      { "field": "artist", "type": "nominal", "title": "Artist" },
+      { "field": "streams_B", "type": "quantitative", "title": "Global streams (B)", "format": ".3f" },
+      { "field": "countries_reached", "type": "quantitative", "title": "Countries reached" }
+    ]
+  },
+  "params": [
+    { "name": "hover1", "select": { "type": "point", "on": "mouseover", "fields": ["artist"] } }
+  ]
+}

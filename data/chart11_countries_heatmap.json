@@ -1,0 +1,125 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Countries reached per artist per year · Spotify Top 200 · 2017-2021.",
+  "width": "container",
+  "height": 340,
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans",
+    "view": { "stroke": "transparent" },
+    "axis": {
+      "domainColor": "rgba(255,255,255,0.08)",
+      "gridColor": "transparent",
+      "tickColor": "transparent",
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    },
+    "legend": {
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11
+    }
+  },
+  "data": { "url": "data/aussie_artists_aggregated_fixed.csv" },
+  "transform": [
+    { "filter": "datum.is_home == 'global' && datum.region != 'Global'" },
+    {
+      "aggregate": [{ "op": "count", "as": "countries_count" }],
+      "groupby": ["artist", "year"]
+    },
+    {
+      "joinaggregate": [{ "op": "sum", "field": "countries_count", "as": "artist_total_countries" }],
+      "groupby": ["artist"]
+    },
+    {
+      "window": [{ "op": "dense_rank", "as": "artist_rank" }],
+      "sort": [{ "field": "artist_total_countries", "order": "descending" }]
+    },
+    { "filter": "datum.artist_rank <= 14" },
+    { "calculate": "toString(datum.year)", "as": "year_str" }
+  ],
+  "params": [
+    { "name": "hover11", "select": { "type": "point", "on": "mouseover", "fields": ["artist"] } }
+  ],
+  "layer": [
+    {
+      "mark": { "type": "rect", "cornerRadius": 3 },
+      "encoding": {
+        "x": {
+          "field": "year_str",
+          "type": "ordinal",
+          "title": "Year",
+          "axis": { "labelAngle": 0 }
+        },
+        "y": {
+          "field": "artist",
+          "type": "nominal",
+          "title": null,
+          "sort": { "field": "artist_total_countries", "op": "sum", "order": "descending" },
+          "axis": { "labelColor": "#c8c6c0", "labelFontSize": 11 }
+        },
+        "color": {
+          "field": "countries_count",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "greens",
+            "domainMin": 0,
+            "null": "rgba(255,255,255,0.04)"
+          },
+          "legend": {
+            "title": "Countries charted",
+            "titleColor": "#e0deda",
+            "labelColor": "#9a9a94",
+            "gradientLength": 120,
+            "labelFontSize": 11,
+            "titleFontSize": 12
+          }
+        },
+        "opacity": {
+          "condition": { "param": "hover11", "value": 1 },
+          "value": 0.75
+        },
+        "tooltip": [
+          { "field": "artist", "type": "nominal", "title": "Artist" },
+          { "field": "year_str", "type": "ordinal", "title": "Year" },
+          { "field": "countries_count", "type": "quantitative", "title": "Countries charted" }
+        ]
+      }
+    },
+    {
+      "data": {"values": [{}]},
+      "mark": {
+        "type": "rect",
+        "width": 12,
+        "height": 12,
+        "cornerRadius": 2,
+        "xOffset": 865,
+        "yOffset": 175
+      },
+      "encoding": {
+        "x": {"value": 865},
+        "y": {"value": 175},
+        "color": {"value": "rgba(255,255,255,0.04)"},
+        "stroke": {"value": "rgba(255,255,255,0.2)"},
+        "strokeWidth": {"value": 0.5}
+      }
+    },
+    {
+      "data": {"values": [{"label": "No data (0 countries)"}]},
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 11,
+        "dx": 8
+      },
+      "encoding": {
+        "x": {"value": 865},
+        "y": {"value": 175},
+        "text": {"field": "label", "type": "nominal"},
+        "color": {"value": "#9a9a94"}
+      }
+    }
+  ]
+}

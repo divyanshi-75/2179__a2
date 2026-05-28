@@ -1,0 +1,121 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "World choropleth showing total Aussie artist streams by country · Spotify Top 200 · 2017-2021.",
+  "width": "container",
+  "height": 400,
+  "projection": { "type": "naturalEarth1" },
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans",
+    "view": { "stroke": "transparent" },
+    "legend": {
+      "labelColor": "#9a9a94",
+      "titleColor": "#9a9a94",
+      "labelFontSize": 11,
+      "gradientLength": 120
+    }
+  },
+  "layer": [
+    {
+      "data": { "sphere": true },
+      "mark": { "type": "geoshape", "fill": "#080808" }
+    },
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2/data/world-110m.json",
+        "format": { "type": "topojson", "feature": "countries" }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#1a1a1a",
+        "stroke": "rgba(255,255,255,0.06)",
+        "strokeWidth": 0.4
+      }
+    },
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2/data/world-110m.json",
+        "format": { "type": "topojson", "feature": "countries" }
+      },
+      "transform": [
+        {
+          "lookup": "id",
+          "from": {
+            "data": {
+              "url": "data/aussie_world_streams.csv",
+              "format": { "parse": { "iso_num": "number", "total_streams_M": "number", "artists_count": "number" } }
+            },
+            "key": "iso_num",
+            "fields": ["total_streams_M", "artists_count", "country"]
+          }
+        },
+        { "filter": "isValid(datum.total_streams_M) && datum.total_streams_M > 0" }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "rgba(255,255,255,0.08)",
+        "strokeWidth": 0.4
+      },
+      "encoding": {
+        "color": {
+          "field": "total_streams_M",
+          "type": "quantitative",
+          "scale": {
+            "type": "log",
+            "scheme": "greens",
+            "domainMin": 1,
+            "null": "rgba(255,255,255,0.06)"
+          },
+          "legend": {
+            "title": "Streams (M)",
+            "titleColor": "#e0deda",
+            "labelColor": "#9a9a94",
+            "gradientLength": 120,
+            "labelFontSize": 11,
+            "titleFontSize": 12,
+            "values": [1, 10, 100, 1000]
+          }
+        },
+        "tooltip": [
+          { "field": "country", "type": "nominal", "title": "Country" },
+          { "field": "total_streams_M", "type": "quantitative", "title": "Streams (M)", "format": ",.1f" },
+          { "field": "artists_count", "type": "quantitative", "title": "Aussie artists charted" }
+        ]
+      }
+    },
+    {
+      "data": {"values": [{"label": "No data"}]},
+      "layer": [
+        {
+          "mark": {
+            "type": "rect",
+            "width": 12,
+            "height": 12,
+            "cornerRadius": 2
+          },
+          "encoding": {
+            "x": {"value": 10},
+            "y": {"value": 10},
+            "color": {"value": "rgba(255,255,255,0.06)"},
+            "stroke": {"value": "rgba(255,255,255,0.15)"},
+            "strokeWidth": {"value": 0.5}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 8,
+            "fontSize": 11
+          },
+          "encoding": {
+            "x": {"value": 10},
+            "y": {"value": 10},
+            "text": {"field": "label", "type": "nominal"},
+            "color": {"value": "#9a9a94"}
+          }
+        }
+      ]
+    }
+  ]
+}

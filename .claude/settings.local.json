@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m http.server 8765)",
+      "Bash(Start-Sleep -Seconds 2)",
+      "Bash(Invoke-WebRequest -Uri \"http://localhost:8765\" -UseBasicParsing)",
+      "Bash(Select-Object -ExpandProperty StatusCode)",
+      "PowerShell(Start-Process python -ArgumentList \"-m\", \"http.server\", \"8765\" -WorkingDirectory \"C:\\\\Users\\\\bittu\\\\Desktop\\\\2179__a2\" -WindowStyle Hidden; Start-Sleep -Seconds 2; try { $r = Invoke-WebRequest -Uri \"http://localhost:8765\" -UseBasicParsing; \"Status: $\\($r.StatusCode\\)\" } catch { \"Error: $_\" })",
+      "PowerShell(Start-Sleep -Seconds 3; try { $r = Invoke-WebRequest -Uri \"http://localhost:8765\" -UseBasicParsing; \"Status: $\\($r.StatusCode\\)\" } catch { \"Error: $_\" })",
+      "PowerShell(netstat *)",
+      "PowerShell(python -c \"import urllib.request; r = urllib.request.urlopen\\('http://localhost:8765'\\); print\\('Status:', r.status\\)\")",
+      "PowerShell(Stop-Process *)",
+      "PowerShell($job = Start-Job -ScriptBlock { Set-Location \"C:\\\\Users\\\\bittu\\\\Desktop\\\\2179__a2\"; python -m http.server 8765 }; Start-Sleep -Seconds 3; \"Job state: $\\($job.State\\)\")",
+      "PowerShell(node --version 2>&1; npx --version 2>&1)",
+      "PowerShell(npx playwright --version 2>&1)",
+      "PowerShell(npx playwright install chromium 2>&1 | Select-Object -Last 5)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\bittu\\\\AppData\\\\Local\\\\npm-cache\\\\_npx\" -Recurse -Filter \"package.json\" | Where-Object { $_.FullName -match \"playwright\" } | Select-Object -First 3 FullName)",
+      "Bash(node *)"
+    ]
+  }
+}
