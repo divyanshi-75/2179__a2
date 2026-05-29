@@ -141,15 +141,15 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "400",
         "baseline": "middle"
       },
       "encoding": {
-        "x": {"value": 20},
-        "y": {"value": -14},
+        "x": {"value": 18},
+        "y": {"value": -16},
         "text": {"field": "label", "type": "nominal"},
-        "color": {"value": "rgba(200,198,192,0.6)"}
+        "color": {"value": "rgb(200, 198, 192)"}
       }
     }
   ]
