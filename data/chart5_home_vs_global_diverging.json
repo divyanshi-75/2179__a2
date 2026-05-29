@@ -8,16 +8,17 @@
     "font": "DM Sans",
     "axis": {
       "domainColor": "rgba(255,255,255,0.08)",
-      "gridColor": "rgba(255,255,255,0.04)",
+      "grid": false,
+      "gridOpacity": 0,
       "tickColor": "transparent",
-      "labelColor": "#9a9a94",
-      "titleColor": "#9a9a94",
+      "labelColor": "#c8c6c0",
+      "titleColor": "#c8c6c0",
       "labelFontSize": 11,
       "titleFontSize": 11
     },
     "legend": {
-      "labelColor": "#9a9a94",
-      "titleColor": "#9a9a94",
+      "labelColor": "#c8c6c0",
+      "titleColor": "#c8c6c0",
       "labelFontSize": 11,
       "orient": "top",
       "padding": 12
@@ -62,13 +63,13 @@
           "type": "nominal",
           "sort": { "field": "diverging_pct", "op": "sum", "order": "descending" },
           "title": null,
-          "axis": { "labelColor": "#c8c6c0", "labelFontSize": 11, "labelLimit": 140 }
+          "axis": { "grid": false, "gridOpacity": 0, "labelColor": "#c8c6c0", "labelFontSize": 11, "labelLimit": 140 }
         },
         "x": {
           "field": "diverging_pct",
           "type": "quantitative",
           "title": "<- Home (Australia) · Global ->",
-          "axis": { "format": ".0f", "labelExpr": "abs(datum.value) + '%'" }
+          "axis": { "grid": false, "gridOpacity": 0, "format": ".0f", "labelExpr": "abs(datum.value) + '%'" }
         },
         "color": {
           "field": "type",
@@ -93,7 +94,7 @@
       "encoding": { "x": { "datum": 0 } }
     },
     {
-      "mark": { "type": "text", "align": "left", "dx": 4, "fontSize": 9, "color": "#9a9a94" },
+      "mark": { "type": "text", "align": "left", "dx": 4, "fontSize": 9, "color": "#c8c6c0" },
       "transform": [{ "filter": "datum.type === 'Global' && datum.pct >= 90" }],
       "encoding": {
         "y": {
@@ -106,7 +107,7 @@
       }
     },
     {
-      "mark": { "type": "text", "align": "right", "dx": -4, "fontSize": 9, "color": "#9a9a94" },
+      "mark": { "type": "text", "align": "right", "dx": -4, "fontSize": 9, "color": "#c8c6c0" },
       "transform": [{ "filter": "datum.type === 'Home (Australia)' && datum.pct >= 90" }],
       "encoding": {
         "y": {

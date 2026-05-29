@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Home heroes vs world conquerors. Home streams (AU) vs global streams per artist · 2017-2021.",
   "width": "container",
@@ -8,17 +8,18 @@
     "font": "DM Sans",
     "view": { "stroke": "transparent" },
     "axis": {
+      "grid": false,
+      "gridOpacity": 0,
       "domainColor": "rgba(255,255,255,0.08)",
-      "gridColor": "rgba(255,255,255,0.04)",
       "tickColor": "transparent",
-      "labelColor": "#9a9a94",
-      "titleColor": "#9a9a94",
+      "labelColor": "#c8c6c0",
+      "titleColor": "#c8c6c0",
       "labelFontSize": 11,
       "titleFontSize": 11
     },
     "legend": {
-      "labelColor": "#9a9a94",
-      "titleColor": "#9a9a94",
+      "labelColor": "#c8c6c0",
+      "titleColor": "#c8c6c0",
       "labelFontSize": 11
     }
   },
@@ -43,21 +44,37 @@
         { "calculate": "datum.global_streams / 1000000", "as": "global_M" },
         { "filter": "datum.global_M > 0" }
       ],
-      "mark": { "type": "point", "filled": true, "opacity": 0.85 },
+      "mark": { "type": "circle", "clip": true, "filled": true, "opacity": 0.85 },
       "encoding": {
         "x": {
           "field": "home_M",
           "type": "quantitative",
-          "scale": { "type": "log", "zero": false },
+          "scale": { "type": "log", "base": 10, "domainMin": 0.5, "domainMax": 500, "nice": false },
           "title": "Home streams — Australia (M, log scale)",
-          "axis": { "format": ",.0f" }
+          "axis": {
+            "grid": false,
+            "values": [0.1, 1, 2, 5, 10, 20, 50, 100, 200, 500, 1000],
+            "labelExpr": "datum.value >= 1 ? datum.label : ''",
+            "labelColor": "#c8c6c0",
+            "titleColor": "#c8c6c0",
+            "labelFontSize": 11,
+            "titleFontSize": 11
+          }
         },
         "y": {
           "field": "global_M",
           "type": "quantitative",
-          "scale": { "type": "log", "zero": false },
+          "scale": { "type": "log", "base": 10, "domainMin": 0.5, "domainMax": 20000, "nice": false },
           "title": "Global streams (M, log scale)",
-          "axis": { "format": ",.0f" }
+          "axis": {
+            "grid": false,
+            "values": [1, 10, 100, 1000, 10000],
+            "labelExpr": "datum.value >= 1 ? datum.label : ''",
+            "labelColor": "#c8c6c0",
+            "titleColor": "#c8c6c0",
+            "labelFontSize": 11,
+            "titleFontSize": 11
+          }
         },
         "size": {
           "field": "countries_reached",
@@ -119,6 +136,7 @@
       ],
       "mark": {
         "type": "text",
+        "clip": true,
         "fontSize": 10,
         "dy": -10,
         "color": "#c8c6c0",
@@ -128,12 +146,12 @@
         "x": {
           "field": "home_M",
           "type": "quantitative",
-          "scale": { "type": "log", "zero": false }
+          "scale": { "type": "log", "base": 10, "domainMin": 0.5, "domainMax": 500, "nice": false }
         },
         "y": {
           "field": "global_M",
           "type": "quantitative",
-          "scale": { "type": "log", "zero": false }
+          "scale": { "type": "log", "base": 10, "domainMin": 0.5, "domainMax": 20000, "nice": false }
         },
         "text": { "field": "artist", "type": "nominal" }
       }
@@ -153,7 +171,168 @@
         "x": {"value": 820},
         "y": {"field": "label", "type": "nominal", "sort": null, "axis": null},
         "text": {"field": "label", "type": "nominal"},
-        "color": {"value": "rgba(255,255,255,0.35)"}
+        "color": {"value": "#c8c6c0"}
+      }
+    },
+
+
+
+
+    
+    {
+      "data": {"values": [{}]},
+      "mark": {"type": "rect", "cornerRadius": 4, "clip": false},
+      "encoding": {
+        "x":           {"value": 8},
+        "x2":          {"value": 220},
+        "y":           {"value": 8},
+        "y2":          {"value": 105},
+        "color":       {"value": "rgba(29,185,84,0.06)"},
+        "stroke":      {"value": "rgba(29,185,84,0.25)"},
+        "strokeWidth": {"value": 0.5}
+      }
+    },
+    {
+      "data": {"values": [{"label": "The global bypass"}]},
+      "mark": {"type": "text", "align": "left", "fontSize": 12, "fontWeight": "600", "clip": false},
+      "encoding": {
+        "x":    {"value": 18},
+        "y":    {"value": 26},
+        "text": {"field": "label"},
+        "color": {"value": "#1DB954"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "Some artists skipped home entirely."}]},
+      "mark": {"type": "text", "align": "left", "fontSize": 10, "fontWeight": "400", "clip": false},
+      "encoding": {
+        "x":    {"value": 18},
+        "y":    {"value": 46},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(200,198,192,0.8)"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "Sia and Kylie charted globally for years"}]},
+      "mark": {"type": "text", "align": "left", "fontSize": 10, "fontWeight": "400", "clip": false},
+      "encoding": {
+        "x":    {"value": 18},
+        "y":    {"value": 62},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(200,198,192,0.8)"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "with modest Australian audiences."}]},
+      "mark": {"type": "text", "align": "left", "fontSize": 10, "fontWeight": "400", "clip": false},
+      "encoding": {
+        "x":    {"value": 18},
+        "y":    {"value": 78},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(200,198,192,0.8)"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "Global first. Home second."}]},
+      "mark": {"type": "text", "align": "left", "fontSize": 10, "fontWeight": "600", "fontStyle": "italic", "clip": false},
+      "encoding": {
+        "x":    {"value": 18},
+        "y":    {"value": 94},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(29,185,84,0.8)"}
+      }
+    },
+
+
+
+
+
+
+
+
+
+
+    {
+      "data": {"values": [{}]},
+      "mark": {"type": "rect", "cornerRadius": 4, "clip": false},
+      "encoding": {
+        "x":           {"value": 370},
+        "x2":          {"value": 507},
+        "y":           {"value": 168},
+        "y2":          {"value": 320},
+        "color":       {"value": "rgba(200,140,255,0.06)"},
+        "stroke":      {"value": "rgba(200,140,255,0.25)"},
+        "strokeWidth": {"value": 0.5}
+      }
+    },
+    {
+      "data": {"values": [{"label": "The home fortress"}]},
+      "mark": {"type": "text", "align": "left", "fontSize": 12, "fontWeight": "600", "clip": false},
+      "encoding": {
+        "x":    {"value": 380},
+        "y":    {"value": 186},
+        "text": {"field": "label"},
+        "color": {"value": "#ce93d8"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "Strong at home,"}]},
+      "mark": {"type": "text", "align": "left", "fontSize": 10, "fontWeight": "400", "clip": false},
+      "encoding": {
+        "x":    {"value": 380},
+        "y":    {"value": 208},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(200,198,192,0.8)"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "invisible globally. Artists"}]},
+      "mark": {"type": "text", "align": "left", "fontSize": 10, "fontWeight": "400", "clip": false},
+      "encoding": {
+        "x":    {"value": 380},
+        "y":    {"value": 226},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(200,198,192,0.8)"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "here built loyal local"}]},
+      "mark": {"type": "text", "align": "left", "fontSize": 10, "fontWeight": "400", "clip": false},
+      "encoding": {
+        "x":    {"value": 380},
+        "y":    {"value": 244},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(200,198,192,0.8)"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "fanbases that never"}]},
+      "mark": {"type": "text", "align": "left", "fontSize": 10, "fontWeight": "400", "clip": false},
+      "encoding": {
+        "x":    {"value": 380},
+        "y":    {"value": 262},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(200,198,192,0.8)"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "translated overseas."}]},
+      "mark": {"type": "text", "align": "left", "fontSize": 10, "fontWeight": "400", "clip": false},
+      "encoding": {
+        "x":    {"value": 380},
+        "y":    {"value": 280},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(200,198,192,0.8)"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "Two careers. One country."}]},
+      "mark": {"type": "text", "align": "left", "fontSize": 10, "fontWeight": "600", "fontStyle": "italic", "clip": false},
+      "encoding": {
+        "x":    {"value": 380},
+        "y":    {"value": 302},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(200,140,255,0.8)"}
       }
     }
   ]

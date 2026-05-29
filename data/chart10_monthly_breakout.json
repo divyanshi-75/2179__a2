@@ -11,14 +11,14 @@
       "domainColor": "rgba(255,255,255,0.08)",
       "gridColor": "rgba(255,255,255,0.04)",
       "tickColor": "transparent",
-      "labelColor": "#9a9a94",
-      "titleColor": "#9a9a94",
+      "labelColor": "#c8c6c0",
+      "titleColor": "#c8c6c0",
       "labelFontSize": 11,
       "titleFontSize": 11
     },
     "legend": {
       "labelColor": "#e0deda",
-      "titleColor": "#9a9a94",
+      "titleColor": "#c8c6c0",
       "labelFontSize": 13,
       "orient": "right",
       "padding": 8
@@ -114,7 +114,7 @@
       "transform": [{ "filter": "datum.month_idx == current_month" }],
       "mark": {
         "type": "rule",
-        "color": "rgba(255,255,255,0.3)",
+        "color": "#c8c6c0",
         "strokeWidth": 1,
         "strokeDash": [3, 3]
       },

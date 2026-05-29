@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Cormorant+SC:wght@300;400&display=swap"
         rel="stylesheet" />
     <style>
         :root {
@@ -16,7 +16,7 @@
             --black: #080808;
             --text: #c8c6c0;
             --bright: #f0ede6;
-            --muted: #5a5a54;
+            --muted: #c8c6c0;
             --border: rgba(255, 255, 255, 0.06);
             --measure: 58ch;
         }
@@ -196,8 +196,8 @@
         }
 
         .hero-sub {
-            font-size: 1rem;
-            color: var(--muted);
+            font-size: 1.19rem;
+            color: #c8c6c0;
             max-width: var(--measure);
             margin: 0 auto 48px;
             opacity: 0;
@@ -292,27 +292,30 @@
 
         /* SECTIONS */
         .section {
-            padding: 90px 0;
-            border-top: 0.5px solid var(--border);
+            padding: 40px 0;
+            border-top: none;
         }
 
         .section-tag {
-            font-size: 10px;
-            font-weight: 500;
-            letter-spacing: 0.2em;
+            font-family: 'Cormorant SC', 'Cormorant', Georgia, serif;
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 0.35em;
             text-transform: uppercase;
-            color: var(--green);
+            color: rgba(29,185,84,0.6);
             margin-bottom: 14px;
+            text-align: center;
+            display: block;
         }
 
-        .section h2 {
+.section h2 {
             font-family: 'DM Serif Display', serif;
             font-size: clamp(1.8rem, 4vw, 2.8rem);
             font-weight: 400;
             color: var(--bright);
             line-height: 1.2;
             max-width: var(--measure);
-            margin-bottom: 16px;
+            margin-bottom: 10px;
         }
 
         .section h2 em {
@@ -324,7 +327,7 @@
             font-size: 1rem;
             color: var(--text);
             max-width: var(--measure);
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         .hl {
@@ -335,7 +338,7 @@
         .callout {
             border-left: 2px solid var(--green);
             padding: 16px 20px;
-            margin-bottom: 36px;
+            margin-bottom: 18px;
             max-width: var(--measure);
             font-size: 0.95rem;
             color: var(--text);
@@ -353,7 +356,7 @@
             border: 0.5px solid rgba(255, 255, 255, 0.07);
             border-radius: 16px;
             padding: 28px;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
         }
 
         .chart-card-title {
@@ -499,12 +502,12 @@
             <!-- Chart 1: Proportional Album Art Squares -->
             <div class="chart-card">
                 <p class="chart-card-title">Australian artists by global streams</p>
-                <p class="chart-card-sub">Square area = total global streams · Spotify Top 200 · 2017–2021 · Hover for details</p>
+                <p class="chart-card-sub">Square area = total global streams · Spotify Top 200 · 2017-2021 · Hover for details</p>
                 <div id="squarechart" style="width:100%;position:relative;"></div>
-                <div id="sq-tooltip" style="display:none;position:fixed;background:rgba(10,10,10,0.92);border:0.5px solid rgba(29,185,84,0.3);border-radius:10px;padding:12px 16px;pointer-events:none;z-index:9999;min-width:180px;backdrop-filter:blur(12px);">
+                <div id="sq-tooltip" style="display:none;position:fixed;background:rgba(10,10,10,0.92);border:0.5px solid rgba(29,185,84,0.3);border-radius:10px;padding:12px 16px;pointer-events:none;z-index:999999;min-width:180px;max-width:220px;backdrop-filter:blur(12px);">
                     <p id="sq-tt-name"      style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:#f0ede6;margin:0 0 4px;"></p>
                     <p id="sq-tt-streams"   style="font-family:'DM Sans',sans-serif;font-size:12px;color:#1DB954;margin:0 0 2px;"></p>
-                    <p id="sq-tt-countries" style="font-family:'DM Sans',sans-serif;font-size:11px;color:#5a5a54;margin:0;"></p>
+                    <p id="sq-tt-countries" style="font-family:'DM Sans',sans-serif;font-size:11px;color:rgb(200,198,192);margin:0;"></p>
                 </div>
             </div>
             <script>
@@ -579,7 +582,7 @@
                             tile.appendChild(badge);
                         }
 
-                        tile.addEventListener('mouseenter', () => {
+                        tile.addEventListener('mouseenter', (e) => {
                             tile.style.transform = 'scale(1.04)';
                             tile.style.boxShadow = '0 0 0 1.5px rgba(29,185,84,0.5),0 8px 32px rgba(0,0,0,0.6)';
                             img.style.filter = 'brightness(0.9)';
@@ -588,11 +591,15 @@
                             ttName.textContent = artist.name;
                             ttStreams.textContent = b >= 1 ? `${b.toFixed(2)}B global streams` : `${(artist.streams / 1e6).toFixed(1)}M global streams`;
                             ttCountries.textContent = `Charted in ${artist.countries} countries`;
+                            const r = tile.getBoundingClientRect();
                             tooltip.style.display = 'block';
+                            tooltip.style.left = (r.left + r.width / 2 - 90) + 'px';
+                            tooltip.style.top  = (r.bottom + 8) + 'px';
                         });
-                        tile.addEventListener('mousemove', e => {
-                            tooltip.style.left = (e.clientX + 16) + 'px';
-                            tooltip.style.top  = (e.clientY - 60) + 'px';
+                        tile.addEventListener('mousemove', () => {
+                            const r = tile.getBoundingClientRect();
+                            tooltip.style.left = (r.left + r.width / 2 - 90) + 'px';
+                            tooltip.style.top  = (r.bottom + 8) + 'px';
                         });
                         tile.addEventListener('mouseleave', () => {
                             tile.style.transform = 'scale(1)';
@@ -612,7 +619,7 @@
                     container.appendChild(wrap);
 
                     const legend = document.createElement('div');
-                    legend.style.cssText = "display:flex;align-items:center;gap:20px;margin-top:8px;font-family:'DM Sans',sans-serif;font-size:11px;color:#5a5a54;flex-wrap:wrap;";
+                    legend.style.cssText = "display:flex;align-items:center;gap:20px;margin-top:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:rgb(200,198,192);flex-wrap:wrap;";
                     legend.innerHTML = `
                         <div style="display:flex;align-items:center;gap:8px;">
                             <div style="display:flex;align-items:flex-end;gap:4px;">
@@ -620,9 +627,9 @@
                                 <div style="width:18px;height:18px;border:0.5px solid rgba(255,255,255,0.2);border-radius:2px;"></div>
                                 <div style="width:26px;height:26px;border:0.5px solid rgba(255,255,255,0.2);border-radius:2px;"></div>
                             </div>
-                            <span>Square area ∝ global streams</span>
+                            <span style="color:rgb(200,198,192);font-size:13px;">Square area &prop; global streams</span>
                         </div>
-                        <span>Hover for stream count</span>
+                        <span style="color:rgb(200,198,192);font-size:13px;">Hover for stream count</span>
                     `;
                     container.appendChild(legend);
                 }
@@ -660,8 +667,8 @@
 </p>
             <!-- Chart 2: Waffle chart -->
             <div class="chart-card">
-                <p class="chart-card-title">Who gets the streams — and when?</p>
-                <p class="chart-card-sub">Each square = 1% of total global streams · Top 6 artists · Spotify Top 200 · 2017–2021 · Hover to explore</p>
+                <p class="chart-card-title">Who gets the streams &mdash; and when?</p>
+                <p class="chart-card-sub">Each square = 1% of total global streams &middot; Top 6 artists &middot; Spotify Top 200 &middot; 2017&ndash;2021 &middot; Hover to explore</p>
                 <div id="chart2-pills" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
                     <button class="waffle-pill active" data-year="ALL">All years</button>
                     <button class="waffle-pill" data-year="2017">2017</button>
@@ -723,7 +730,7 @@
             <!-- Chart 4: Home streams bubble -->
             <div class="chart-card" id="chart4-bubble">
                 <p class="chart-card-title">Australia's home streaming story</p>
-                <p class="chart-card-sub">Monthly home streams per artist · 2017–2021 · Each panel shows one artist's journey</p>
+                <p class="chart-card-sub">Monthly home streams per artist &middot; 2017&ndash;2021 &middot; Each panel shows one artist's journey</p>
                 <div id="chart4"></div>
             </div>
             <div class="callout">
@@ -877,7 +884,6 @@
 </div>
         </div>
     </section> <!-- SECTION 4 END -->
-
     <section class="section" id="section-5">
         <div class="container">
             <p class="section-tag">Section 05 &mdash; The Takeaway</p>
@@ -1112,13 +1118,25 @@
     <script>
         const EMBED_OPTS = { actions: false, renderer: "svg" };
         const CHARTS = [
-            ["#chart3", "data/chart3_home_rankings_lollipop.json"],
             ["#chart4", "data/chart4_small_multiples.json"],
             ["#chart5", "data/chart5_home_vs_global_diverging.json"],
             ["#chart6", "data/chart6_world_choropleth.json"],
             ["#chart9", "data/chart9_scatter_home_global.json"],
             ["#chart11", "data/chart11_countries_heatmap.json"]
         ];
+        const chart3Promise = vegaEmbed("#chart3", "data/chart3_home_rankings_lollipop.json", EMBED_OPTS).then(() => {
+            const chartCard = document.getElementById('chart3').closest('.chart-card');
+            if (chartCard) {
+                const selectWrap = chartCard.querySelector('.vega-bind');
+                if (selectWrap) {
+                    selectWrap.style.cssText = 'margin-bottom: 16px; font-family: DM Sans, sans-serif; font-size: 13px; color: #9a9a94;';
+                    const select = selectWrap.querySelector('select');
+                    if (select) {
+                        select.style.cssText = 'background: rgba(14,14,14,0.9); border: 0.5px solid rgba(29,185,84,0.3); border-radius: 100px; color: #1DB954; font-family: DM Sans, sans-serif; font-size: 12px; font-weight: 500; padding: 6px 16px; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none;';
+                    }
+                }
+            }
+        });
         const chart2Promise = vegaEmbed("#chart2", "data/chart2_waffle.json", EMBED_OPTS)
             .then(({ view }) => {
                 document.querySelectorAll(".waffle-pill").forEach(btn => {
@@ -1160,10 +1178,11 @@
                     }
                 });
             });
-        Promise.all([...CHARTS.map(([sel, spec]) => vegaEmbed(sel, spec, EMBED_OPTS)), chart2Promise, chart10Promise])
+        Promise.all([...CHARTS.map(([sel, spec]) => vegaEmbed(sel, spec, EMBED_OPTS)), chart2Promise, chart3Promise, chart10Promise])
             .catch(err => console.error("Chart load error:", err));
     </script>
     <script src="js/disco.js"></script>
+    <script src="js/cursor.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "World choropleth showing total Aussie artist streams by country · Spotify Top 200 · 2017-2021.",
   "width": "container",
@@ -9,8 +9,8 @@
     "font": "DM Sans",
     "view": { "stroke": "transparent" },
     "legend": {
-      "labelColor": "#9a9a94",
-      "titleColor": "#9a9a94",
+      "labelColor": "#c8c6c0",
+      "titleColor": "#c8c6c0",
       "labelFontSize": 11,
       "gradientLength": 120
     }
@@ -69,7 +69,7 @@
           "legend": {
             "title": "Streams (M)",
             "titleColor": "#e0deda",
-            "labelColor": "#9a9a94",
+            "labelColor": "#c8c6c0",
             "gradientLength": 120,
             "labelFontSize": 11,
             "titleFontSize": 12,
@@ -112,7 +112,7 @@
             "x": {"value": 10},
             "y": {"value": 10},
             "text": {"field": "label", "type": "nominal"},
-            "color": {"value": "#9a9a94"}
+            "color": {"value": "#c8c6c0"}
           }
         }
       ]

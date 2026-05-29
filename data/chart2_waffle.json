@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Waffle chart: share of global streams per year for top 6 Australian artists.",
   "width": "container",
@@ -9,14 +9,14 @@
     "view": { "stroke": "transparent" },
     "axis": {
       "gridColor": "rgba(255,255,255,0.04)",
-      "labelColor": "#9a9a94",
-      "titleColor": "#9a9a94",
+      "labelColor": "#c8c6c0",
+      "titleColor": "#c8c6c0",
       "labelFontSize": 11,
       "titleFontSize": 11
     },
     "legend": {
       "labelColor": "#e0deda",
-      "titleColor": "#9a9a94",
+      "titleColor": "#c8c6c0",
       "labelFontSize": 13,
       "symbolSize": 140,
       "symbolType": "square",

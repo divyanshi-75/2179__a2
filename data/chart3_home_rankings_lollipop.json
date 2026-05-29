@@ -3,22 +3,40 @@
   "description": "Australia home chart rankings — lollipop with zone backgrounds.",
   "width": "container",
   "height": 900,
+  "usermeta": {
+    "embedOptions": {
+      "actions": false,
+      "renderer": "svg"
+    }
+  },
+  "params": [
+    {
+      "name": "tier_select",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "Gold", "Silver", "Bronze", "Finalist"],
+        "labels": ["All artists", "Gold - Top 10", "Silver - Top 50", "Bronze - Top 100", "Finalist - 101 to 200"],
+        "name": "Show: "
+      }
+    }
+  ],
   "config": {
     "background": "transparent",
     "font": "DM Sans",
-    "view": { "stroke": "transparent" },
+    "view": { "stroke": "transparent", "continuousHeight": 900 },
     "axis": {
       "domainColor": "rgba(255,255,255,0.08)",
       "gridColor": "rgba(255,255,255,0.04)",
       "tickColor": "transparent",
-      "labelColor": "#9a9a94",
-      "titleColor": "#9a9a94",
+      "labelColor": "#c8c6c0",
+      "titleColor": "#c8c6c0",
       "labelFontSize": 11,
       "titleFontSize": 11
     },
     "legend": {
-      "labelColor": "#9a9a94",
-      "titleColor": "#9a9a94",
+      "labelColor": "#c8c6c0",
+      "titleColor": "#c8c6c0",
       "labelFontSize": 11,
       "orient": "top",
       "padding": 8
@@ -34,6 +52,9 @@
         { "op": "mean", "field": "avg_rank",     "as": "avg_rank"    }
       ],
       "groupby": ["artist"]
+    },
+    {
+      "filter": "tier_select === 'All' || (tier_select === 'Gold' && datum.peak_rank <= 10) || (tier_select === 'Silver' && datum.peak_rank > 10 && datum.peak_rank <= 50) || (tier_select === 'Bronze' && datum.peak_rank > 50 && datum.peak_rank <= 100) || (tier_select === 'Finalist' && datum.peak_rank > 100)"
     }
   ],
   "layer": [
@@ -186,15 +207,22 @@
         ]
       }
     },
+
+
+
+
+
+      
+
     {
       "description": "Layer 1 -Gold zone annotation highlight rect",
-      "data": { "values": [{ "x1": 0, "x2": 10 }] },
+      "data": { "values": [{  }] },
       "mark": { "type": "rect", "color": "rgba(255,215,0,0.06)", "stroke": null },
       "encoding": {
-        "x":  { "field": "x1", "type": "quantitative" },
-        "x2": { "field": "x2", "type": "quantitative" },
-        "y":  { "value": 0 },
-        "y2": { "value": 900 }
+        "x":  {"value": 400},
+        "x2": {"value": 600},
+        "y":  { "value": 20 },
+        "y2": { "value": 60 }
       }
     },
     {
@@ -209,8 +237,8 @@
         "baseline": "top"
       },
       "encoding": {
-        "x":    { "field": "rank", "type": "quantitative" },
-        "y":    { "value": 45 },
+        "x":    { "value": 490 },
+        "y":    { "value": 29 },
         "text": { "field": "label", "type": "nominal" }
       }
     },
@@ -219,51 +247,26 @@
       "data": { "values": [{ "rank": 5, "label2": "ever cracked the top 10" }] },
       "mark": {
         "type": "text",
-        "fontSize": 10,
+        "fontSize": 12,
         "color": "rgba(255,215,0,0.6)",
         "align": "center",
         "baseline": "top"
       },
       "encoding": {
-        "x":    { "field": "rank", "type": "quantitative" },
-        "y":    { "value": 59 },
+        "x":    { "value": 478},
+        "y":    { "value": 45 },
         "text": { "field": "label2", "type": "nominal" }
       }
     },
-    {
-      "description": "Layer 3a -Finalist zone text annotation line 1",
-      "data": { "values": [{ "rank": 150, "note": "Charting here still means" }] },
-      "mark": {
-        "type": "text",
-        "fontSize": 11,
-        "color": "rgba(255,255,255,0.5)",
-        "fontStyle": "italic",
-        "align": "center",
-        "baseline": "top"
-      },
-      "encoding": {
-        "x":    { "field": "rank", "type": "quantitative" },
-        "y":    { "value": 720 },
-        "text": { "field": "note", "type": "nominal" }
-      }
-    },
-    {
-      "description": "Layer 3b -Finalist zone text annotation line 2",
-      "data": { "values": [{ "rank": 150, "note2": "top 200 on earth" }] },
-      "mark": {
-        "type": "text",
-        "fontSize": 11,
-        "color": "rgba(255,255,255,0.5)",
-        "fontStyle": "italic",
-        "align": "center",
-        "baseline": "top"
-      },
-      "encoding": {
-        "x":    { "field": "rank", "type": "quantitative" },
-        "y":    { "value": 734 },
-        "text": { "field": "note2", "type": "nominal" }
-      }
-    },
+    
+
+
+
+
+
+
+     
+
     {
       "description": "Layer 4 -Rank 1 arrow annotation",
       "data": { "values": [{ "rank": 1, "txt": "\u2191 Two artists hit #1" }] },
@@ -277,9 +280,161 @@
         "dx": 8
       },
       "encoding": {
-        "x":    { "field": "rank", "type": "quantitative" },
-        "y":    { "value": 70 },
+        "x":    { "value": 0 },
+        "y":    { "value": 66 },
         "text": { "field": "txt", "type": "nominal" }
+      }
+    },
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "data": {"values": [{}]},
+      "mark": {"type": "rect", "cornerRadius": 4, "opacity": 0.08},
+      "encoding": {
+        "x":  {"value": 450},
+        "x2": {"value": 650},
+        "y":  {"value": 100},
+        "y2":  {"value": 275},
+        "color": {"value": "rgba(29,185,84,0.8)"},
+        "stroke": {"value": "rgba(29,185,84,0.3)"},
+        "strokeWidth": {"value": 0.5}
+      }
+    },
+    {
+      "data": {"values": [{"label": "Still elite company"}]},
+      "mark": {"type": "text", "align": "center", "fontSize": 14, "fontWeight": "600", "dy": 14},
+      "encoding": {
+        "x": {"value": 520},
+        "y":  {"value": 105},
+        "text": {"field": "label"},
+        "color": {"value": "#1DB954"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "Ranking in the Spotify Top 200"}]},
+      "mark": {"type": "text", "align": "center", "fontSize": 12, "fontWeight": "400", "dy": 30},
+      "encoding": {
+        "x": {"value": 545},
+        "y":  {"value": 120},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(255,255,255,0.65)"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "puts you among the most"}]},
+      "mark": {"type": "text", "align": "center", "fontSize": 12, "fontWeight": "400", "dy": 46},
+      "encoding": {
+        "x": {"value": 535},
+        "y": {"value": 135},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(255,255,255,0.65)"}
+      }
+    },
+    {
+      "data": {"values": [{ "label": "streamed songs on earth."}]},
+      "mark": {"type": "text", "align": "center", "fontSize": 12, "fontWeight": "400", "dy": 62},
+      "encoding": {
+        "x": {"value": 535},
+        "y": {"value": 150},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(255,255,255,0.65)"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "Getting here is rare."}]},
+      "mark": {"type": "text", "align": "center", "fontSize": 13, "fontWeight": "600", "dy": 80, "fontStyle": "italic"},
+      "encoding": {
+        "x": {"value": 520},
+        "y": {"value": 165},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(29,185,84,0.8)"}
+      }
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "data": {"values": [{}]},
+      "mark": {"type": "rect", "cornerRadius": 4, "opacity": 0.08},
+      "encoding": {
+        "x":  {"value": 450},
+        "x2": {"value": 650},
+        "y":  {"value": 720},
+        "y2":  {"value": 885},
+        "color": {"value": "rgba(255,215,0,0.8)"},
+        "stroke": {"value": "rgba(255,215,0,0.3)"},
+        "strokeWidth": {"value": 0.5}
+      }
+    },
+    {
+      "data": {"values": [{"label": "The home heroes"}]},
+      "mark": {"type": "text", "align": "center", "fontSize": 14, "fontWeight": "600", "dy": 14},
+      "encoding": {
+        "x": {"value": 520},
+        "y": {"value": 725},
+        "text": {"field": "label"},
+        "color": {"value": "#ffd700"}
+      }
+    },
+    {
+      "data": {"values": [{ "label": "Artists ranked below 50"}]},
+      "mark": {"type": "text", "align": "center", "fontSize": 12, "fontWeight": "400", "dy": 30},
+      "encoding": {
+        "x": {"value": 525},
+        "y": {"value": 740},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(255,255,255,0.65)"}
+      }
+    },
+    {
+      "data": {"values": [{ "label": "at home are mostly invisible"}]},
+      "mark": {"type": "text", "align": "center", "fontSize": 12, "fontWeight": "400", "dy": 46},
+      "encoding": {
+        "x": {"value": 535},
+        "y": {"value": 755},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(255,255,255,0.65)"}
+      }
+    },
+    {
+      "data": {"values": [{ "label": "globally. Beloved locally."}]},
+      "mark": {"type": "text", "align": "center", "fontSize": 12, "fontWeight": "400", "dy": 62},
+      "encoding": {
+        "x": {"value": 525},
+        "y": {"value": 770},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(255,255,255,0.65)"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "Two different careers."}]},
+      "mark": {"type": "text", "align": "center", "fontSize": 13, "fontWeight": "600", "dy": 80, "fontStyle": "italic"},
+      "encoding": {
+        "x": {"value": 520},
+        "y": {"value": 785},
+        "text": {"field": "label"},
+        "color": {"value": "rgba(255,215,0,0.8)"}
       }
     }
   ]
